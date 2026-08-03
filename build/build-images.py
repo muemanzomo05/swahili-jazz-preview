@@ -87,8 +87,8 @@ def cover(name, slug, ratio, labels, focus=(0.5, 0.4), q=82):
 
 
 print("hero")
-cover("hero photo.png", "hero", 3 / 2, [1536, 1100, 760], focus=(0.5, 0.35), q=80)
-cover("hero photo.png", "hero-portrait", 3 / 4, [900, 620], focus=(0.47, 0.25), q=80)
+cover("home-hero-2026.png", "hero", 3 / 2, [1536, 1100, 760], focus=(0.5, 0.5), q=80)
+cover("home-hero-2026.png", "hero-portrait", 3 / 4, [900, 620], focus=(0.5, 0.5), q=80)
 
 print("about / studio")
 cover("studio.png", "studio", 5 / 4, [1240, 900, 640], focus=(0.5, 0.5))
