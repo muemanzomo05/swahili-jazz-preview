@@ -420,6 +420,26 @@ function footer() {
 </footer>`;
 }
 
+/** Fixed bottom-left contact dock. Rendered outside <main> so it floats over
+ *  every section without participating in any section's layout. */
+function floatingActions() {
+  const f = C.floatingActions;
+  if (!f?.items?.length) return '';
+  const items = f.items
+    .map((it) => {
+      const href = it.wa
+        ? `https://wa.me/${it.wa.phone}?text=${encodeURIComponent(it.wa.message)}`
+        : url(it.href);
+      const attrs = it.wa ? linkAttrs(href) : '';
+      return (
+        `<a class="fab fab--${it.variant}" href="${esc(href)}"${attrs} aria-label="${esc(it.aria)}">` +
+        `${icon(it.icon, 'fab__icon')}<span class="fab__label" aria-hidden="true">${esc(it.label)}</span></a>`
+      );
+    })
+    .join('');
+  return `<div class="fab-dock" role="group" aria-label="${esc(f.ariaLabel)}">${items}</div>`;
+}
+
 /* ---------------------------------------------------------------- document */
 
 const schema = {
@@ -431,7 +451,11 @@ const schema = {
   url: LINKS.website,
   foundingDate: C.about.badge.bottom,
   email: url('@contactEmail').replace('mailto:', ''),
-  telephone: C.footer.contact.find((c) => c.icon === 'phone')?.label,
+  // not rendered on the page — structured data only
+  telephone: (() => {
+    const wa = C.floatingActions?.items?.find((i) => i.wa);
+    return wa ? `+${wa.wa.phone}` : undefined;
+  })(),
   sameAs: Object.values(LINKS.social),
 };
 
@@ -476,6 +500,7 @@ ${gallery()}
 ${ctaBand()}
 </main>
 ${footer()}
+${floatingActions()}
 <script src="static/js/main.js" defer></script>
 </body>
 </html>

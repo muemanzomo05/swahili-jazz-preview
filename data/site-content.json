@@ -203,8 +203,7 @@
     "id": "contact",
     "tagline": "Bringing the soul of the East African coast to every stage — blending timeless Swahili tradition with the language of jazz.",
     "contact": [
-      { "icon": "mail", "label": "swahilijazz@yahoo.com", "href": "@contactEmail" },
-      { "icon": "phone", "label": "+254 715 706 236", "href": "@social.whatsapp", "external": true }
+      { "icon": "mail", "label": "swahilijazz@yahoo.com", "href": "@contactEmail" }
     ],
     "newsletter": {
       "heading": "Stay Connected",
@@ -238,5 +237,29 @@
     },
     "copyright": "© 2026 Swahili Jazz. All rights reserved.",
     "credit": { "before": "Designed with", "after": "for Culture & Music" }
+  },
+
+  "floatingActions": {
+    "_note": "Fixed bottom-left contact buttons. `wa.phone` must be in international format without + or a leading 0 — wa.me rejects local formats like 0726…",
+    "ariaLabel": "Contact Swahili Jazz",
+    "items": [
+      {
+        "variant": "phone",
+        "icon": "phone",
+        "label": "Call",
+        "aria": "Call Swahili Jazz",
+        "href": "tel:0726950836"
+      },
+      {
+        "variant": "whatsapp",
+        "icon": "whatsapp",
+        "label": "WhatsApp",
+        "aria": "Message Swahili Jazz on WhatsApp",
+        "wa": {
+          "phone": "254726950836",
+          "message": "Hello Swahili Jazz, I'd like to enquire about your services."
+        }
+      }
+    ]
   }
 }

@@ -105,6 +105,7 @@
 
     var slides = $$('.slide', stage);
     var thumbs = $$('[data-thumb]', stage);
+    var strip = $('[data-thumbs]', stage);
     var caption = $('[data-caption]', stage);
     var count = $('[data-count]', stage);
     var bar = $('[data-progress]', stage);
@@ -115,6 +116,24 @@
     var timer = null, start = 0, raf = null, paused = false;
 
     var pad = function (n) { return String(n).padStart(2, '0'); };
+
+    /* Centre the active thumbnail inside its own strip.
+       Deliberately NOT scrollIntoView(): that walks up and scrolls every
+       scrollable ancestor including the document, which yanked the page down
+       to the gallery on each slide change. scrollBy on the strip is confined
+       to the strip, so the reader's scroll position is never touched. */
+    function centreThumb() {
+      if (!strip || strip.scrollWidth <= strip.clientWidth) return;
+      var t = thumbs[index].getBoundingClientRect();
+      var s = strip.getBoundingClientRect();
+      var delta = (t.left + t.width / 2) - (s.left + s.width / 2);
+      if (Math.abs(delta) < 1) return;
+      if (strip.scrollBy) {
+        strip.scrollBy({ left: delta, behavior: reduced ? 'auto' : 'smooth' });
+      } else {
+        strip.scrollLeft += delta;
+      }
+    }
 
     function show(next, viaUser) {
       next = (next + total) % total;
@@ -145,8 +164,7 @@
       if (count) count.textContent = pad(index + 1);
       if (live) live.textContent = 'Image ' + (index + 1) + ' of ' + total;
 
-      thumbs[index].scrollIntoView({ block: 'nearest', inline: 'center',
-        behavior: reduced ? 'auto' : 'smooth' });
+      centreThumb();
 
       if (viaUser) restart();
     }
