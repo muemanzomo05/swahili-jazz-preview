@@ -102,7 +102,7 @@ function button(b, extraCls = '') {
 function navBar() {
   const links = C.nav.links.map((l) => `<li><a class="nav__link" href="${esc(l.href)}">${esc(l.label)}</a></li>`).join('');
   const brand =
-    `<a class="brand" href="#home" aria-label="${esc(C.site.name)} — home">` +
+    `<a class="brand" href="#home" aria-label="${esc(C.site.name)} home">` +
     `${img('logo', { alt: '', cls: 'brand__mark', sizes: '40px', eager: true, ratio: 320 / 338 })}` +
     `<span class="brand__word">${esc(C.site.wordmark)}</span></a>`;
   const cta = button({ ...C.nav.cta, variant: 'outline', icon: null }, 'btn--sm nav__cta');
@@ -383,7 +383,7 @@ function footer() {
   <div class="shell">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a class="brand" href="#home" aria-label="${esc(C.site.name)} — home">
+        <a class="brand" href="#home" aria-label="${esc(C.site.name)} home">
           ${img('logo', { alt: '', cls: 'brand__mark', sizes: '40px', ratio: 320 / 338 })}
           <span class="brand__word">${esc(C.site.wordmark)}</span>
         </a>

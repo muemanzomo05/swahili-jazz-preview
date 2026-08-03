@@ -5,8 +5,8 @@
     "name": "Swahili Jazz",
     "wordmark": "SWAHILI JAZZ",
     "slogan": "The Sounds of the Soul",
-    "title": "Swahili Jazz — Timeless Culture. Unforgettable Experiences.",
-    "description": "Swahili Jazz is a premier Kenyan entertainment company delivering world-class live music, event production, artist management, record label services and entertainment consultancy.",
+    "title": "Swahili Jazz | Timeless Culture. Unforgettable Experiences.",
+    "description": "A Kenyan entertainment company built on live music. Swahili Jazz performs, produces events, manages artists and runs its own record label.",
     "locale": "en",
     "themeColor": "#131212",
     "_noindex": "Set false at launch. While true the build emits noindex/nofollow and a disallow-all robots.txt so client-review deploys never reach search results.",
@@ -56,9 +56,9 @@
     "image": { "slug": "studio", "alt": "The Swahili Jazz recording studio with mixing desk and illuminated logo" },
     "badge": { "top": "Est.", "bottom": "2010" },
     "paragraphs": [
-      "Swahili Jazz is a premier Kenyan entertainment company specializing in world-class live music entertainment, event production, artist management, record label services, and entertainment consultancy. We create exceptional experiences for corporate events, festivals, diplomatic missions, hospitality venues, private celebrations, and cultural productions, delivering creativity, professionalism, and excellence at every stage.",
-      "Founded by renowned saxophonist, composer, music director, and cultural ambassador Juma Tutu, the company is built on decades of industry experience and trusted partnerships. Juma is a respected and accomplished musician who was conferred the National Hero title by the Government of Kenya in recognition of his outstanding contribution to the nation's music, arts, and cultural heritage.",
-      "Guided by our slogan, “The Sounds of the Soul,” Swahili Jazz is committed to connecting people through music, nurturing artistic excellence, and delivering unforgettable entertainment experiences in Kenya and around the world."
+      "Swahili Jazz is a Kenyan entertainment company built on live music. We produce events, manage artists, run a record label and advise on entertainment. You will find us at corporate functions, festivals, diplomatic events, hotels, private celebrations and cultural productions. Every booking gets the same care, whatever the size of the room.",
+      "The company was founded by Juma Tutu, a saxophonist, composer, music director and cultural ambassador. Decades of playing and long-standing partnerships sit behind everything we do. The Government of Kenya named Juma a National Hero for his contribution to the country's music, arts and cultural heritage.",
+      "Our slogan is “The Sounds of the Soul,” and it shapes how we work. Music brings people together. We look after the artists coming up behind us, and we give audiences in Kenya and abroad a night worth remembering."
     ],
     "stats": [
       { "value": "15+", "label": "Years on Stage", "style": "metallic" },
@@ -79,35 +79,35 @@
     "items": [
       {
         "title": "Live Entertainment",
-        "description": "From intimate gatherings to grand festival stages, our ensemble delivers soul-stirring performances rooted in Swahili coastal tradition and modern jazz.",
+        "description": "Our ensemble plays small private rooms and main festival stages with the same energy. The sound is rooted in Swahili coastal tradition and shaped by modern jazz.",
         "icon": "sax",
         "image": { "slug": "svc-live", "alt": "Juma Tutu performing at the Safaricom International Jazz Festival" },
         "href": "@bookTheBand"
       },
       {
         "title": "Entertainment Agency",
-        "description": "A full-service agency curating live music for hotels, corporate galas, weddings and cultural festivals — tailored, reliable, unforgettable.",
+        "description": "We book and curate live music for hotels, corporate galas, weddings and cultural festivals. Tell us the room and the crowd, and we will put the right act in front of them.",
         "icon": "handshake",
         "image": { "slug": "svc-agency", "alt": "Trumpet and saxophone players performing together on a festival stage" },
         "href": "@bookTheBand"
       },
       {
         "title": "Events Production",
-        "description": "Full-scale event production — from concept and sound design to staging and technical direction — crafted to deliver seamless, world-class live experiences.",
+        "description": "We handle concept, sound design, staging and technical direction. One team stays accountable for how the whole night runs.",
         "icon": "sliders",
         "image": { "slug": "svc-events", "alt": "The Swahili Jazz band ensemble together before a performance" },
         "href": "@bookTheBand"
       },
       {
         "title": "Record Label",
-        "description": "We produce, record and distribute original music that celebrates the sound of the Swahili coast — from our studio to audiences worldwide.",
+        "description": "We record, produce and release original music from our own studio. It carries the sound of the Swahili coast to listeners anywhere.",
         "icon": "disc",
         "image": { "slug": "svc-record", "alt": "The Swahili Jazz recording studio control room" },
         "href": "@bandcamp"
       },
       {
         "title": "Artist Management",
-        "description": "We develop and represent exceptional talent, guiding careers with integrity, vision and a global ambition grounded in local heritage.",
+        "description": "We represent artists and help them build careers with a clear plan. The ambition is international. The roots stay local.",
         "icon": "users",
         "image": { "slug": "svc-artist", "alt": "Swahili Jazz artists performing live on stage" },
         "href": "@bookTheBand"
@@ -123,11 +123,11 @@
     ],
     "background": { "slug": "why-bg", "alt": "" },
     "items": [
-      { "icon": "trophy", "value": "500+", "label": "Events Delivered", "description": "From intimate sets to sold-out festival stages." },
-      { "icon": "note", "value": "15", "label": "Years on Stage", "description": "A legacy built on the authentic coastal sound." },
-      { "icon": "users", "value": "20+", "label": "Resident Artists", "description": "A versatile roster of exceptional musicians." },
-      { "icon": "globe", "value": "4", "label": "Continents Touring", "description": "Carrying Swahili jazz across the globe." },
-      { "icon": "star", "value": "5-Star", "label": "Client Rating", "description": "Trusted by brands, venues and embassies." }
+      { "icon": "trophy", "value": "500+", "label": "Events Delivered", "description": "Private sets, corporate stages and sold-out festivals." },
+      { "icon": "note", "value": "15", "label": "Years on Stage", "description": "Built on the coastal sound we grew up with." },
+      { "icon": "users", "value": "20+", "label": "Resident Artists", "description": "Musicians who can play whatever the night needs." },
+      { "icon": "globe", "value": "4", "label": "Continents Touring", "description": "We have taken Swahili jazz well beyond Kenya." },
+      { "icon": "star", "value": "5-Star", "label": "Client Rating", "description": "Brands, venues and embassies keep coming back." }
     ]
   },
 
@@ -178,7 +178,7 @@
     "startIndex": 8,
     "items": [
       { "slug": "gallery/g01", "caption": "Headlining the Safaricom International Jazz Festival" },
-      { "slug": "gallery/g02", "caption": "Corporate showcase with partners and collaborators" },
+      { "slug": "gallery/g02", "caption": "With partners at a corporate showcase" },
       { "slug": "gallery/g03", "caption": "Juma Tutu receiving the National Hero honour" },
       { "slug": "gallery/g04", "caption": "The horn section in full flight" },
       { "slug": "gallery/g05", "caption": "An open-air evening set on the coast" },
@@ -201,16 +201,16 @@
 
   "footer": {
     "id": "contact",
-    "tagline": "Bringing the soul of the East African coast to every stage — blending timeless Swahili tradition with the language of jazz.",
+    "tagline": "We bring the soul of the East African coast to every stage. Swahili tradition, played in the language of jazz.",
     "contact": [
       { "icon": "mail", "label": "swahilijazz@yahoo.com", "href": "@contactEmail" }
     ],
     "newsletter": {
       "heading": "Stay Connected",
-      "text": "Shows, releases and stories — straight to your inbox.",
+      "text": "Shows, releases and stories sent straight to your inbox.",
       "placeholder": "Your email address",
       "button": "Subscribe",
-      "success": "Thank you — you’re on the list.",
+      "success": "Thank you. You’re on the list.",
       "action": "@contactEmail"
     },
     "explore": {
@@ -240,7 +240,7 @@
   },
 
   "floatingActions": {
-    "_note": "Fixed bottom-left contact buttons. `wa.phone` must be in international format without + or a leading 0 — wa.me rejects local formats like 0726…",
+    "_note": "Fixed bottom-left contact buttons. `wa.phone` must be in international format without + or a leading 0, because wa.me rejects local formats like 0726...",
     "ariaLabel": "Contact Swahili Jazz",
     "items": [
       {
