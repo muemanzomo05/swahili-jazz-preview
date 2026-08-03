@@ -233,7 +233,8 @@
     var msg = $('[data-nl-msg]', form);
     var input = $('input', form);
     var mailto = form.getAttribute('action') || '';
-    var success = 'Thank you — you’re on the list.';
+    // copy lives in data/site-content.json, not here
+    var success = form.getAttribute('data-success') || 'Thank you. You are on the list.';
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();

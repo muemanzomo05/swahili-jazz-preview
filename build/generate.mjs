@@ -392,7 +392,8 @@ function footer() {
         <div class="newsletter">
           <h2 class="footer__heading">${esc(f.newsletter.heading)}</h2>
           <p class="footer__text">${esc(f.newsletter.text)}</p>
-          <form class="newsletter__form" data-newsletter action="${esc(url(f.newsletter.action))}" method="post">
+          <form class="newsletter__form" data-newsletter action="${esc(url(f.newsletter.action))}" method="post"
+                data-success="${esc(f.newsletter.success)}">
             <label class="sr-only" for="nl-email">${esc(f.newsletter.placeholder)}</label>
             <input id="nl-email" name="email" type="email" required autocomplete="email"
                    placeholder="${esc(f.newsletter.placeholder)}">
@@ -513,7 +514,7 @@ console.log(`index.html written — ${(html.length / 1024).toFixed(1)} KB`);
 writeFileSync(
   join(ROOT, 'robots.txt'),
   C.site.noindex
-    ? '# Client review build — not for indexing.\nUser-agent: *\nDisallow: /\n'
+    ? '# Client review build. Not for indexing.\nUser-agent: *\nDisallow: /\n'
     : `User-agent: *\nAllow: /\n\nSitemap: ${LINKS.website.replace(/\/?$/, '/')}sitemap.xml\n`,
   'utf8'
 );
