@@ -206,6 +206,7 @@ function services() {
     .map((it) => {
       const href = it.page ? servicePath(it.page) : link(it.href);
       return `<article class="card" data-reveal>
+      <a class="card__link" href="${esc(href)}"${linkAttrs(href)}>
       <div class="card__media">${img(it.image.slug, {
         alt: it.image.alt,
         sizes: '(max-width: 640px) 46vw, (max-width: 1023px) 46vw, 30vw',
@@ -214,8 +215,9 @@ function services() {
       <div class="card__body">
         <h3 class="card__title">${esc(it.title)}</h3>
         <p class="card__text">${esc(it.description)}</p>
-        <a class="link-more" href="${esc(href)}"${linkAttrs(href)}>${esc(s.linkLabel)}${icon('arrow-right', 'link-more__arrow')}</a>
+        <span class="link-more">${esc(s.linkLabel)}${icon('arrow-right', 'link-more__arrow')}</span>
       </div>
+      </a>
     </article>`;
     })
     .join('');
@@ -457,15 +459,16 @@ function bookingForm(f, submitLabel) {
 
 function ctaBand(submitLabel) {
   const c = C.cta;
+  const action = { ...c.button, label: submitLabel || c.button.label };
   return `<section class="cta section" id="${c.id}">
   <div class="cta__glow" aria-hidden="true"></div>
   <div class="shell cta__inner">
     <div data-reveal-group>
-      ${eyebrow(submitLabel || c.eyebrow, 'center')}
+      ${eyebrow(c.eyebrow, 'center')}
       ${headline(c.headline, 'h2', 'hl--center hl--cta')}
       <p class="cta__intro">${esc(c.intro)}</p>
     </div>
-    <div class="cta__form" data-reveal>${bookingForm(c.form, submitLabel)}</div>
+    <div class="cta__action" data-reveal>${button(action)}</div>
   </div>
 </section>`;
 }

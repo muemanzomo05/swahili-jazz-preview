@@ -204,8 +204,8 @@ for px in (180, 32):
     print(f"  icon-{px}.png")
 
 print("client logos")
-for f in ["alliance-francaise-mombasa.png", "kempinski.png", "radisson-blu.png",
-          "republic-of-kenya.png", "safaricom.png", "world-bank.png"]:
+for f in ["absa-logo-bg.png", "acek-logo.webp", "icipe-logo-monochrome.png",
+          "rotary-clubs-of-kenya.webp", "safaricom.png"]:
     im = load(f).convert("RGBA")
     if im.width > 400:
         im = im.resize((400, int(round(im.height * 400 / im.width))), Image.LANCZOS)
@@ -213,11 +213,6 @@ for f in ["alliance-francaise-mombasa.png", "kempinski.png", "radisson-blu.png",
     rw, rh, kb = emit(im, f"clients/{slug}.webp", 88, alpha=True)
     manifest[f"client:{slug}"] = [{"src": f"clients/{slug}.webp", "w": rw, "h": rh}]
     print(f"  clients/{slug}.webp {rw}x{rh} {kb:.1f} KB")
-
-for f in ["hemingways-collection.svg", "sarova-hotels-resorts.svg"]:
-    shutil.copy(os.path.join(SRC, f), os.path.join(OUT, "clients", f))
-    manifest[f"client:{os.path.splitext(f)[0]}"] = [{"src": f"clients/{f}", "w": 0, "h": 0}]
-    print(f"  clients/{f} (copied)")
 
 with open(os.path.join(OUT, "manifest.json"), "w", encoding="utf-8") as fh:
     json.dump(manifest, fh, indent=1)

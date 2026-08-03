@@ -302,7 +302,7 @@ input { font: inherit; }
 .nav__link {
   position: relative;
   font-family: var(--sans);
-  font-size: 12px; font-weight: 500;
+  font-size: 13px; font-weight: 500;
   letter-spacing: .14em; text-transform: uppercase;
   color: rgba(255, 255, 255, .74);
   padding-block: 6px;

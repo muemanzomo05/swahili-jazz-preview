@@ -19,7 +19,8 @@
       { "label": "About", "href": "#about" },
       { "label": "Services", "href": "#services" },
       { "label": "Events", "href": "#events" },
-      { "label": "Media", "href": "#media" }
+      { "label": "Media", "href": "#media" },
+      { "label": "Contact", "href": "#contact" }
     ],
     "cta": { "label": "Book the Band", "href": "#booking" }
   },
@@ -161,14 +162,11 @@
       { "text": "Worked With", "style": "gold", "inline": true }
     ],
     "logos": [
-      { "slug": "sarova-hotels-resorts", "name": "Sarova Hotels & Resorts" },
-      { "slug": "kempinski", "name": "Kempinski" },
+      { "slug": "absa-logo-bg", "name": "ABSA" },
       { "slug": "safaricom", "name": "Safaricom" },
-      { "slug": "republic-of-kenya", "name": "Republic of Kenya" },
-      { "slug": "alliance-francaise-mombasa", "name": "Alliance Française Mombasa" },
-      { "slug": "radisson-blu", "name": "Radisson Blu" },
-      { "slug": "hemingways-collection", "name": "Hemingways Collection" },
-      { "slug": "world-bank", "name": "The World Bank" }
+      { "slug": "icipe-logo-monochrome", "name": "ICIPE" },
+      { "slug": "acek-logo", "name": "ACEK" },
+      { "slug": "rotary-clubs-of-kenya", "name": "Rotary Clubs of Kenya" }
     ],
     "cta": { "label": "View All Clients", "href": "@bookTheBand", "variant": "outline", "external": true }
   },
@@ -204,40 +202,7 @@
       { "text": "to your stage?", "style": "metallic", "inline": true }
     ],
     "intro": "Tell us about the event and we will come back to you with availability and a quote.",
-    "form": {
-      "_endpoint": "Leave empty and the form composes a structured email instead. Paste a Formspree/Getform/Basin URL here and it POSTs directly, no mail client needed.",
-      "endpoint": "",
-      "submit": "Send Enquiry",
-      "sending": "Sending",
-      "required": "Required",
-      "fields": [
-        { "name": "name", "label": "Your name", "type": "text", "required": true, "autocomplete": "name" },
-        { "name": "email", "label": "Email", "type": "email", "required": true, "autocomplete": "email" },
-        { "name": "organisation", "label": "Organisation", "type": "text", "autocomplete": "organization" },
-        { "name": "phone", "label": "Phone", "type": "tel", "autocomplete": "tel" },
-        { "name": "eventType", "label": "Event type", "type": "select", "options": [
-          "Corporate event", "Wedding", "Festival", "Private celebration",
-          "Hotel or venue residency", "Diplomatic or cultural", "Something else"
-        ] },
-        { "name": "eventDate", "label": "Event date", "type": "date" },
-        { "name": "venue", "label": "Venue or location", "type": "text", "span": 2 },
-        { "name": "message", "label": "Tell us about the event", "type": "textarea", "rows": 4, "span": 2 }
-      ],
-      "success": {
-        "heading": "Thank you. Your enquiry is on its way.",
-        "body": "We reply to most enquiries within two working days."
-      },
-      "mailtoNote": {
-        "heading": "Your email app should have opened.",
-        "body": "If nothing happened, send the details to us directly and we will pick it up from there.",
-        "copyLabel": "Copy email address",
-        "copiedLabel": "Copied"
-      },
-      "error": {
-        "heading": "That did not send.",
-        "body": "Please try again, or reach us on WhatsApp and we will sort it out."
-      }
-    }
+    "button": { "label": "Send Enquiry", "href": "@contactEmail", "variant": "gold", "icon": "arrow-right" }
   },
 
   "footer": {
@@ -261,7 +226,8 @@
         { "label": "About", "href": "#about" },
         { "label": "Services", "href": "#services" },
         { "label": "Events", "href": "#events" },
-        { "label": "Media", "href": "#media" }
+        { "label": "Media", "href": "#media" },
+        { "label": "Contact", "href": "#contact" }
       ]
     },
     "follow": {

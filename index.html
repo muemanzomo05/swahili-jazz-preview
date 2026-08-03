@@ -30,7 +30,7 @@
 <header class="nav" id="nav" data-nav>
   <div class="nav__inner shell">
     <a class="brand" href="#home" aria-label="Swahili Jazz home"><img src="static/img/logo-320.webp" srcset="static/img/logo-96.webp 96w, static/img/logo-160.webp 160w, static/img/logo-320.webp 320w" sizes="44px" alt="" width="320" height="338" class="brand__mark" fetchpriority="high" decoding="async"><span class="brand__word">SWAHILI JAZZ</span></a>
-    <nav class="nav__links" aria-label="Primary"><ul><li><a class="nav__link" href="#home">Home</a></li><li><a class="nav__link" href="#about">About</a></li><li><a class="nav__link" href="#services">Services</a></li><li><a class="nav__link" href="#events">Events</a></li><li><a class="nav__link" href="#media">Media</a></li></ul></nav>
+    <nav class="nav__links" aria-label="Primary"><ul><li><a class="nav__link" href="#home">Home</a></li><li><a class="nav__link" href="#about">About</a></li><li><a class="nav__link" href="#services">Services</a></li><li><a class="nav__link" href="#events">Events</a></li><li><a class="nav__link" href="#media">Media</a></li><li><a class="nav__link" href="#contact">Contact</a></li></ul></nav>
     <div class="nav__actions"><a class="btn btn--outline btn--sm nav__cta" href="#booking"><span>Book the Band</span></a>
       <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
         <span class="nav__toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -40,7 +40,7 @@
 </header>
 <div class="menu" id="mobile-menu" data-menu hidden>
   <nav class="menu__inner" aria-label="Mobile">
-    <ul><li style="--i:0"><a href="#home" data-menu-link>Home</a></li><li style="--i:1"><a href="#about" data-menu-link>About</a></li><li style="--i:2"><a href="#services" data-menu-link>Services</a></li><li style="--i:3"><a href="#events" data-menu-link>Events</a></li><li style="--i:4"><a href="#media" data-menu-link>Media</a></li></ul>
+    <ul><li style="--i:0"><a href="#home" data-menu-link>Home</a></li><li style="--i:1"><a href="#about" data-menu-link>About</a></li><li style="--i:2"><a href="#services" data-menu-link>Services</a></li><li style="--i:3"><a href="#events" data-menu-link>Events</a></li><li style="--i:4"><a href="#media" data-menu-link>Media</a></li><li style="--i:5"><a href="#contact" data-menu-link>Contact</a></li></ul>
     <a class="btn btn--gold menu__cta" href="#booking"><span>Book the Band</span><svg class="ico btn__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></g></svg></a>
   </nav>
 </div>
@@ -91,40 +91,50 @@
       <div class="ornament" aria-hidden="true"><span></span><i></i><span></span></div>
     </div>
     <div class="services__grid"><article class="card" data-reveal>
+      <a class="card__link" href="services/live-entertainment.html">
       <div class="card__media"><img src="static/img/svc-live-900.webp" srcset="static/img/svc-live-620.webp 620w, static/img/svc-live-900.webp 900w" sizes="(max-width: 640px) 46vw, (max-width: 1023px) 46vw, 30vw" alt="Juma Tutu performing at the Safaricom International Jazz Festival" width="900" height="675" loading="lazy" decoding="async"><span class="card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3.5v7.8a5.5 5.5 0 0 1-5.5 5.5A3.5 3.5 0 0 0 5 20.3"/><path d="M14 3.5h3.2"/><path d="M8.6 20.5h4.6a4 4 0 0 0 4-4V13"/><circle cx="11" cy="8.5" r=".9"/><circle cx="11" cy="12" r=".9"/></g></svg></span></div>
       <div class="card__body">
         <h3 class="card__title">Live Music Entertainment</h3>
         <p class="card__text">Our ensemble plays small private rooms and main festival stages with the same energy, shaped by modern jazz.</p>
-        <a class="link-more" href="services/live-entertainment.html">Learn More<svg class="ico link-more__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></g></svg></a>
+        <span class="link-more">Learn More<svg class="ico link-more__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></g></svg></span>
       </div>
+      </a>
     </article><article class="card" data-reveal>
+      <a class="card__link" href="services/entertainment-agency.html">
       <div class="card__media"><img src="static/img/svc-agency-900.webp" srcset="static/img/svc-agency-620.webp 620w, static/img/svc-agency-900.webp 682w" sizes="(max-width: 640px) 46vw, (max-width: 1023px) 46vw, 30vw" alt="Trumpet and saxophone players performing together on a festival stage" width="682" height="512" loading="lazy" decoding="async"><span class="card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11.5 7 8h3.5l1.5 1.5L13.5 8H17l3.5 3.5"/><path d="M20.5 11.5v4a1.5 1.5 0 0 1-1.5 1.5h-1"/><path d="M3.5 11.5v4A1.5 1.5 0 0 0 5 17h1"/><path d="m9 14 2 2 2-2 2 2 2-2"/></g></svg></span></div>
       <div class="card__body">
         <h3 class="card__title">Entertainment Agency</h3>
         <p class="card__text">We book and curate live music for hotels, corporate galas, weddings and cultural festivals. Tell us the room and the crowd, and we will put the right act in front of them.</p>
-        <a class="link-more" href="services/entertainment-agency.html">Learn More<svg class="ico link-more__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></g></svg></a>
+        <span class="link-more">Learn More<svg class="ico link-more__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></g></svg></span>
       </div>
+      </a>
     </article><article class="card" data-reveal>
+      <a class="card__link" href="services/events-production.html">
       <div class="card__media"><img src="static/img/svc-events-900.webp" srcset="static/img/svc-events-620.webp 620w, static/img/svc-events-900.webp 900w" sizes="(max-width: 640px) 46vw, (max-width: 1023px) 46vw, 30vw" alt="The Swahili Jazz band ensemble together before a performance" width="900" height="675" loading="lazy" decoding="async"><span class="card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5v6M6 14.5v6M12 3.5v9M12 17.5v3M18 3.5v3M18 11.5v9"/><circle cx="6" cy="12" r="2.2"/><circle cx="12" cy="15" r="2.2"/><circle cx="18" cy="9" r="2.2"/></g></svg></span></div>
       <div class="card__body">
         <h3 class="card__title">Events Production</h3>
         <p class="card__text">We handle concept, sound design, staging and technical direction. One team stays accountable for how the whole night runs.</p>
-        <a class="link-more" href="services/events-production.html">Learn More<svg class="ico link-more__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></g></svg></a>
+        <span class="link-more">Learn More<svg class="ico link-more__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></g></svg></span>
       </div>
+      </a>
     </article><article class="card" data-reveal>
+      <a class="card__link" href="services/record-label.html">
       <div class="card__media"><img src="static/img/svc-record-900.webp" srcset="static/img/svc-record-620.webp 620w, static/img/svc-record-900.webp 900w" sizes="(max-width: 640px) 46vw, (max-width: 1023px) 46vw, 30vw" alt="The Swahili Jazz recording studio control room" width="900" height="675" loading="lazy" decoding="async"><span class="card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.4"/><path d="M12 3.5a8.5 8.5 0 0 1 6 2.5"/></g></svg></span></div>
       <div class="card__body">
         <h3 class="card__title">Record Label</h3>
         <p class="card__text">We record, produce and release original music from our own studio for listeners anywhere.</p>
-        <a class="link-more" href="services/record-label.html">Learn More<svg class="ico link-more__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></g></svg></a>
+        <span class="link-more">Learn More<svg class="ico link-more__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></g></svg></span>
       </div>
+      </a>
     </article><article class="card" data-reveal>
+      <a class="card__link" href="services/artist-management.html">
       <div class="card__media"><img src="static/img/svc-artist-900.webp" srcset="static/img/svc-artist-620.webp 620w, static/img/svc-artist-900.webp 667w" sizes="(max-width: 640px) 46vw, (max-width: 1023px) 46vw, 30vw" alt="Swahili Jazz artists performing live on stage" width="667" height="500" loading="lazy" decoding="async"><span class="card__icon"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9.5" cy="9" r="3.2"/><path d="M4 19a5.5 5.5 0 0 1 11 0"/><path d="M16 6.5a3 3 0 0 1 0 5.6"/><path d="M17.5 14.4A5.2 5.2 0 0 1 20.5 19"/></g></svg></span></div>
       <div class="card__body">
         <h3 class="card__title">Artist Management</h3>
         <p class="card__text">We represent artists and help them build careers with a clear plan. The ambition is international. The roots stay local.</p>
-        <a class="link-more" href="services/artist-management.html">Learn More<svg class="ico link-more__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></g></svg></a>
+        <span class="link-more">Learn More<svg class="ico link-more__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></g></svg></span>
       </div>
+      </a>
     </article></div>
   </div>
 </section>
@@ -209,7 +219,7 @@
         <p class="eyebrow"><span class="eyebrow__rule"></span>Trusted By</p>
         <h2 class="hl hl--sm"><span class="hl-plain">Clients We’ve</span> <span class="hl-gold">Worked With</span></h2>
       </div>
-      <ul class="clients" data-reveal><li class="client"><img src="static/img/clients/sarova-hotels-resorts.svg" alt="Sarova Hotels &amp; Resorts" loading="lazy" decoding="async"></li><li class="client"><img src="static/img/clients/kempinski.webp" alt="Kempinski" width="250" height="99" loading="lazy" decoding="async"></li><li class="client"><img src="static/img/clients/safaricom.webp" alt="Safaricom" width="118" height="25" loading="lazy" decoding="async"></li><li class="client"><img src="static/img/clients/republic-of-kenya.webp" alt="Republic of Kenya" width="400" height="395" loading="lazy" decoding="async"></li><li class="client"><img src="static/img/clients/alliance-francaise-mombasa.webp" alt="Alliance Française Mombasa" width="400" height="252" loading="lazy" decoding="async"></li><li class="client"><img src="static/img/clients/radisson-blu.webp" alt="Radisson Blu" width="250" height="76" loading="lazy" decoding="async"></li><li class="client"><img src="static/img/clients/hemingways-collection.svg" alt="Hemingways Collection" loading="lazy" decoding="async"></li><li class="client"><img src="static/img/clients/world-bank.webp" alt="The World Bank" width="330" height="67" loading="lazy" decoding="async"></li></ul>
+      <ul class="clients" data-reveal><li class="client"><img src="static/img/clients/absa-logo-bg.webp" alt="ABSA" width="400" height="400" loading="lazy" decoding="async"></li><li class="client"><img src="static/img/clients/safaricom.webp" alt="Safaricom" width="118" height="25" loading="lazy" decoding="async"></li><li class="client"><img src="static/img/clients/icipe-logo-monochrome.webp" alt="ICIPE" width="280" height="115" loading="lazy" decoding="async"></li><li class="client"><img src="static/img/clients/acek-logo.webp" alt="ACEK" width="65" height="65" loading="lazy" decoding="async"></li><li class="client"><img src="static/img/clients/rotary-clubs-of-kenya.webp" alt="Rotary Clubs of Kenya" width="120" height="48" loading="lazy" decoding="async"></li></ul>
       <div class="duo__cta" data-reveal><a class="btn btn--outline btn--sm" href="mailto:inquiries@swahilijazz.co.ke"><span>View All Clients</span></a></div>
     </div>
   </div>
@@ -244,49 +254,7 @@
       <h2 class="hl hl--center hl--cta"><span class="hl-plain">Ready to bring The Sounds of the Soul</span> <span class="hl-metallic">to your stage?</span></h2>
       <p class="cta__intro">Tell us about the event and we will come back to you with availability and a quote.</p>
     </div>
-    <div class="cta__form" data-reveal><form class="form" data-booking
-      
-      data-endpoint=""
-      data-mailto="mailto:inquiries@swahilijazz.co.ke"
-      novalidate>
-      <div class="form__grid"><p class="field">
-        <label for="bk-name">Your name <span class="field__req" title="Required">*</span></label><input id="bk-name" name="name" type="text" required autocomplete="name">
-      </p><p class="field">
-        <label for="bk-email">Email <span class="field__req" title="Required">*</span></label><input id="bk-email" name="email" type="email" required autocomplete="email">
-      </p><p class="field">
-        <label for="bk-organisation">Organisation</label><input id="bk-organisation" name="organisation" type="text" autocomplete="organization">
-      </p><p class="field">
-        <label for="bk-phone">Phone</label><input id="bk-phone" name="phone" type="tel" autocomplete="tel">
-      </p><p class="field">
-        <label for="bk-eventType">Event type</label><select id="bk-eventType" name="eventType"><option value="">Please choose</option><option value="Corporate event">Corporate event</option><option value="Wedding">Wedding</option><option value="Festival">Festival</option><option value="Private celebration">Private celebration</option><option value="Hotel or venue residency">Hotel or venue residency</option><option value="Diplomatic or cultural">Diplomatic or cultural</option><option value="Something else">Something else</option></select>
-      </p><p class="field">
-        <label for="bk-eventDate">Event date</label><input id="bk-eventDate" name="eventDate" type="date">
-      </p><p class="field field--wide">
-        <label for="bk-venue">Venue or location</label><input id="bk-venue" name="venue" type="text">
-      </p><p class="field field--wide">
-        <label for="bk-message">Tell us about the event</label><textarea id="bk-message" name="message" rows="4"></textarea>
-      </p></div>
-      <p class="form__gotcha" aria-hidden="true">
-        <label for="bk-company">Do not fill this in</label>
-        <input id="bk-company" name="_company" type="text" tabindex="-1" autocomplete="off">
-      </p>
-      <button class="btn btn--gold form__submit" type="submit">
-        <span data-submit-label>Send Enquiry</span><svg class="ico btn__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></g></svg>
-      </button>
-      <div class="form__status" role="status" aria-live="polite" data-form-status hidden>
-        <p class="form__status-heading" data-status-heading></p>
-        <p class="form__status-body" data-status-body></p>
-        <div class="form__fallback" data-status-fallback hidden>
-          <a class="platform" href="mailto:inquiries@swahilijazz.co.ke"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.6 7 8.4 6 8.4-6"/></g></svg><span>inquiries@swahilijazz.co.ke</span></a>
-          <button class="platform" type="button" data-copy="inquiries@swahilijazz.co.ke"
-                  data-copy-label="Copy email address" data-copied-label="Copied">
-            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/></g></svg><span>Copy email address</span>
-          </button>
-          <a class="platform" href="https://wa.me/254715706236" target="_blank" rel="noopener noreferrer"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.04 2.5a9.4 9.4 0 0 0-8 14.32L2.6 21.5l4.8-1.4a9.4 9.4 0 1 0 4.64-17.6m0 1.7a7.7 7.7 0 0 1 0 15.4 7.6 7.6 0 0 1-3.9-1.07l-.28-.16-2.85.83.85-2.77-.18-.29a7.7 7.7 0 0 1 6.36-11.94m-2.3 3.6c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.6c.13.17 1.75 2.78 4.32 3.79 2.13.84 2.57.67 3.03.63.46-.05 1.49-.61 1.7-1.2.21-.59.21-1.1.15-1.2s-.25-.17-.51-.3-1.49-.74-1.72-.82-.4-.13-.57.13-.65.82-.8.99-.3.19-.55.06a6.9 6.9 0 0 1-2.03-1.25 7.7 7.7 0 0 1-1.4-1.75c-.15-.25 0-.39.11-.51.11-.12.25-.3.38-.45s.17-.25.25-.42a.47.47 0 0 0-.02-.44c-.06-.13-.56-1.38-.79-1.88-.19-.42-.38-.4-.53-.4z"/></svg><span>WhatsApp</span></a>
-        </div>
-      </div>
-      <script type="application/json" data-form-copy>{"success":{"heading":"Thank you. Your enquiry is on its way.","body":"We reply to most enquiries within two working days."},"mailtoNote":{"heading":"Your email app should have opened.","body":"If nothing happened, send the details to us directly and we will pick it up from there.","copyLabel":"Copy email address","copiedLabel":"Copied"},"error":{"heading":"That did not send.","body":"Please try again, or reach us on WhatsApp and we will sort it out."},"sending":"Sending","submit":"Send Enquiry"}</script>
-    </form></div>
+    <div class="cta__action" data-reveal><a class="btn btn--gold" href="mailto:inquiries@swahilijazz.co.ke"><span>Send Enquiry</span><svg class="ico btn__arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></g></svg></a></div>
   </div>
 </section>
 </main>
@@ -317,7 +285,7 @@
       </div>
       <div class="footer__col">
         <h2 class="footer__heading">Explore</h2>
-        <ul class="footer__links"><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#events">Events</a></li><li><a href="#media">Media</a></li></ul>
+        <ul class="footer__links"><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#events">Events</a></li><li><a href="#media">Media</a></li><li><a href="#contact">Contact</a></li></ul>
       </div>
       <div class="footer__col">
         <h2 class="footer__heading">Follow Us</h2>

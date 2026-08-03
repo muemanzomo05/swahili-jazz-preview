@@ -635,32 +635,32 @@
    "w": 96
   }
  ],
- "client:alliance-francaise-mombasa": [
+ "client:absa-logo-bg": [
   {
-   "src": "clients/alliance-francaise-mombasa.webp",
+   "src": "clients/absa-logo-bg.webp",
    "w": 400,
-   "h": 252
+   "h": 400
   }
  ],
- "client:kempinski": [
+ "client:acek-logo": [
   {
-   "src": "clients/kempinski.webp",
-   "w": 250,
-   "h": 99
+   "src": "clients/acek-logo.webp",
+   "w": 65,
+   "h": 65
   }
  ],
- "client:radisson-blu": [
+ "client:icipe-logo-monochrome": [
   {
-   "src": "clients/radisson-blu.webp",
-   "w": 250,
-   "h": 76
+   "src": "clients/icipe-logo-monochrome.webp",
+   "w": 280,
+   "h": 115
   }
  ],
- "client:republic-of-kenya": [
+ "client:rotary-clubs-of-kenya": [
   {
-   "src": "clients/republic-of-kenya.webp",
-   "w": 400,
-   "h": 395
+   "src": "clients/rotary-clubs-of-kenya.webp",
+   "w": 120,
+   "h": 48
   }
  ],
  "client:safaricom": [
@@ -668,27 +668,6 @@
    "src": "clients/safaricom.webp",
    "w": 118,
    "h": 25
-  }
- ],
- "client:world-bank": [
-  {
-   "src": "clients/world-bank.webp",
-   "w": 330,
-   "h": 67
-  }
- ],
- "client:hemingways-collection": [
-  {
-   "src": "clients/hemingways-collection.svg",
-   "w": 0,
-   "h": 0
-  }
- ],
- "client:sarova-hotels-resorts": [
-  {
-   "src": "clients/sarova-hotels-resorts.svg",
-   "w": 0,
-   "h": 0
   }
  ]
 }
