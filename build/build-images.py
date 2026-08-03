@@ -22,8 +22,25 @@ manifest = {}
 total = [0, 0.0]
 
 
+# Three supplied photos carry third-party watermarks burnt into the pixels.
+# The band is trimmed off here, before any crop, so every derivative of that
+# source is clean no matter where it is used.
+#   43655174…  "#GalleryKhately" across the lower left
+#   480328604… a coloured photographer badge, lower left
+#   89945664…  "ED&FRAY Photography 2012. All Rights Reserved."
+WATERMARK_TRIM = {
+    "43655174_2245029319063944_7382900566797582336_n.jpg": 0.13,
+    "480328604_4044623399104518_6663332959742383511_n.jpg": 0.17,
+    "89945664_2621442111422661_2273650180630773760_n.jpg": 0.23,
+}
+
+
 def load(name):
-    return ImageOps.exif_transpose(Image.open(os.path.join(SRC, name)))
+    im = ImageOps.exif_transpose(Image.open(os.path.join(SRC, name)))
+    cut = WATERMARK_TRIM.get(name)
+    if cut:
+        im = im.crop((0, 0, im.width, int(im.height * (1 - cut))))
+    return im
 
 
 def emit(im, rel, q=82, alpha=False):
@@ -105,6 +122,69 @@ GALLERY = [
 for i, (f, foc) in enumerate(GALLERY, 1):
     cover(f, f"gallery/g{i:02d}", 16 / 9, [1600, 1000], focus=foc, q=80)
     cover(f, f"gallery/g{i:02d}-thumb", 4 / 3, [260], focus=foc, q=74)
+
+print("service page banners")
+PAGE_HERO = {
+    "live-entertainment": ("43655174_2245029319063944_7382900566797582336_n.jpg", (0.5, 0.34)),
+    "entertainment-agency": ("53218975_2326026067630935_7309705124253794304_n.jpg", (0.5, 0.36)),
+    "events-production": ("480328604_4044623399104518_6663332959742383511_n.jpg", (0.5, 0.40)),
+    "record-label": ("studio.png", (0.5, 0.50)),
+    "artist-management": ("Macho Man.jpeg", (0.5, 0.30)),
+}
+for slug, (f, foc) in PAGE_HERO.items():
+    cover(f, f"pages/{slug}-hero", 2.4, [1800, 1200, 800], focus=foc, q=78)
+
+print("service page feature images (5:4)")
+PAGE_FEATURE = {
+    "live-entertainment": ("89945664_2621442111422661_2273650180630773760_n.jpg", (0.5, 0.35)),
+    "entertainment-agency": ("59787536_2368651173368424_4421678224325476352_n.jpg", (0.5, 0.40)),
+    "events-production": ("480555761_4044623175771207_812781330418235097_n.jpg", (0.5, 0.40)),
+    "record-label": ("WhatsApp Image 2026-08-01 at 1.55.24 PM (2).jpeg", (0.5, 0.45)),
+    "artist-management": ("WhatsApp Image 2026-08-01 at 3.53.48 PM.jpeg", (0.5, 0.30)),
+}
+for slug, (f, foc) in PAGE_FEATURE.items():
+    cover(f, f"pages/{slug}-feature", 5 / 4, [900, 620], focus=foc, q=80)
+
+print("service page media grids (4:3)")
+PAGE_MEDIA = {
+    "live-entertainment": [
+        ("43655174_2245029319063944_7382900566797582336_n.jpg", (0.5, 0.35)),
+        ("53218975_2326026067630935_7309705124253794304_n.jpg", (0.5, 0.38)),
+        ("480328604_4044623399104518_6663332959742383511_n.jpg", (0.5, 0.40)),
+        ("53556623_2336371169929758_4009656587076501504_n.jpg", (0.5, 0.45)),
+        ("59787536_2368651173368424_4421678224325476352_n.jpg", (0.5, 0.40)),
+        ("53110679_2336371203263088_775428956286353408_n.jpg", (0.5, 0.40)),
+        ("487503460_4088586334708224_685374931644666226_n.jpg", (0.5, 0.40)),
+        ("53794367_2336371269929748_4937209531185758208_n.jpg", (0.5, 0.40)),
+    ],
+    "entertainment-agency": [
+        ("59295909_2368651253368416_6739314109927391232_n.jpg", (0.5, 0.40)),
+        ("480555761_4044623175771207_812781330418235097_n.jpg", (0.5, 0.40)),
+        ("Jimmy Dludlu.png", (0.5, 0.35)),
+        ("53503873_2336371856596356_5397682647256268800_n.jpg", (0.5, 0.45)),
+    ],
+    "events-production": [
+        ("480328604_4044623399104518_6663332959742383511_n.jpg", (0.5, 0.40)),
+        ("53556623_2336371169929758_4009656587076501504_n.jpg", (0.5, 0.45)),
+        ("87818679_2609259549307584_2460358172834004992_n.jpg", (0.5, 0.35)),
+        ("58902214_2365340540366154_6881347157987688448_n.jpg", (0.5, 0.35)),
+    ],
+    "record-label": [
+        ("studio.png", (0.5, 0.50)),
+        ("WhatsApp Image 2026-08-01 at 1.55.24 PM.jpeg", (0.5, 0.45)),
+        ("WhatsApp Image 2026-08-01 at 1.55.24 PM (1).jpeg", (0.5, 0.45)),
+        ("WhatsApp Image 2026-08-01 at 1.58.13 PM.jpeg", (0.5, 0.40)),
+    ],
+    "artist-management": [
+        ("Tutu3.jpg", (0.5, 0.28)),
+        ("Macho Man.jpeg", (0.5, 0.30)),
+        ("WhatsApp Image 2026-08-01 at 3.53.48 PM (3).jpeg", (0.5, 0.30)),
+        ("M an Tutu.jpeg", (0.5, 0.35)),
+    ],
+}
+for slug, items in PAGE_MEDIA.items():
+    for i, (f, foc) in enumerate(items, 1):
+        cover(f, f"pages/{slug}-m{i}", 4 / 3, [760, 520], focus=foc, q=80)
 
 print("logo + favicons")
 lg = load("Logo.png").convert("RGBA")

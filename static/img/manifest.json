@@ -232,7 +232,7 @@
  "gallery/g09": [
   {
    "src": "gallery/g09-1600.webp",
-   "w": 1240
+   "w": 1221
   },
   {
    "src": "gallery/g09-1000.webp",
@@ -259,6 +259,366 @@
   {
    "src": "gallery/g10-thumb-260.webp",
    "w": 260
+  }
+ ],
+ "pages/live-entertainment-hero": [
+  {
+   "src": "pages/live-entertainment-hero-1800.webp",
+   "w": 1800
+  },
+  {
+   "src": "pages/live-entertainment-hero-1200.webp",
+   "w": 1200
+  },
+  {
+   "src": "pages/live-entertainment-hero-800.webp",
+   "w": 800
+  }
+ ],
+ "pages/entertainment-agency-hero": [
+  {
+   "src": "pages/entertainment-agency-hero-1800.webp",
+   "w": 682
+  },
+  {
+   "src": "pages/entertainment-agency-hero-1200.webp",
+   "w": 682
+  },
+  {
+   "src": "pages/entertainment-agency-hero-800.webp",
+   "w": 682
+  }
+ ],
+ "pages/events-production-hero": [
+  {
+   "src": "pages/events-production-hero-1800.webp",
+   "w": 1240
+  },
+  {
+   "src": "pages/events-production-hero-1200.webp",
+   "w": 1200
+  },
+  {
+   "src": "pages/events-production-hero-800.webp",
+   "w": 800
+  }
+ ],
+ "pages/record-label-hero": [
+  {
+   "src": "pages/record-label-hero-1800.webp",
+   "w": 1536
+  },
+  {
+   "src": "pages/record-label-hero-1200.webp",
+   "w": 1200
+  },
+  {
+   "src": "pages/record-label-hero-800.webp",
+   "w": 800
+  }
+ ],
+ "pages/artist-management-hero": [
+  {
+   "src": "pages/artist-management-hero-1800.webp",
+   "w": 1280
+  },
+  {
+   "src": "pages/artist-management-hero-1200.webp",
+   "w": 1200
+  },
+  {
+   "src": "pages/artist-management-hero-800.webp",
+   "w": 800
+  }
+ ],
+ "pages/live-entertainment-feature": [
+  {
+   "src": "pages/live-entertainment-feature-900.webp",
+   "w": 900
+  },
+  {
+   "src": "pages/live-entertainment-feature-620.webp",
+   "w": 620
+  }
+ ],
+ "pages/entertainment-agency-feature": [
+  {
+   "src": "pages/entertainment-agency-feature-900.webp",
+   "w": 625
+  },
+  {
+   "src": "pages/entertainment-agency-feature-620.webp",
+   "w": 620
+  }
+ ],
+ "pages/events-production-feature": [
+  {
+   "src": "pages/events-production-feature-900.webp",
+   "w": 900
+  },
+  {
+   "src": "pages/events-production-feature-620.webp",
+   "w": 620
+  }
+ ],
+ "pages/record-label-feature": [
+  {
+   "src": "pages/record-label-feature-900.webp",
+   "w": 900
+  },
+  {
+   "src": "pages/record-label-feature-620.webp",
+   "w": 620
+  }
+ ],
+ "pages/artist-management-feature": [
+  {
+   "src": "pages/artist-management-feature-900.webp",
+   "w": 828
+  },
+  {
+   "src": "pages/artist-management-feature-620.webp",
+   "w": 620
+  }
+ ],
+ "pages/live-entertainment-m1": [
+  {
+   "src": "pages/live-entertainment-m1-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/live-entertainment-m1-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/live-entertainment-m2": [
+  {
+   "src": "pages/live-entertainment-m2-760.webp",
+   "w": 682
+  },
+  {
+   "src": "pages/live-entertainment-m2-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/live-entertainment-m3": [
+  {
+   "src": "pages/live-entertainment-m3-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/live-entertainment-m3-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/live-entertainment-m4": [
+  {
+   "src": "pages/live-entertainment-m4-760.webp",
+   "w": 667
+  },
+  {
+   "src": "pages/live-entertainment-m4-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/live-entertainment-m5": [
+  {
+   "src": "pages/live-entertainment-m5-760.webp",
+   "w": 667
+  },
+  {
+   "src": "pages/live-entertainment-m5-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/live-entertainment-m6": [
+  {
+   "src": "pages/live-entertainment-m6-760.webp",
+   "w": 667
+  },
+  {
+   "src": "pages/live-entertainment-m6-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/live-entertainment-m7": [
+  {
+   "src": "pages/live-entertainment-m7-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/live-entertainment-m7-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/live-entertainment-m8": [
+  {
+   "src": "pages/live-entertainment-m8-760.webp",
+   "w": 667
+  },
+  {
+   "src": "pages/live-entertainment-m8-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/entertainment-agency-m1": [
+  {
+   "src": "pages/entertainment-agency-m1-760.webp",
+   "w": 667
+  },
+  {
+   "src": "pages/entertainment-agency-m1-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/entertainment-agency-m2": [
+  {
+   "src": "pages/entertainment-agency-m2-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/entertainment-agency-m2-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/entertainment-agency-m3": [
+  {
+   "src": "pages/entertainment-agency-m3-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/entertainment-agency-m3-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/entertainment-agency-m4": [
+  {
+   "src": "pages/entertainment-agency-m4-760.webp",
+   "w": 667
+  },
+  {
+   "src": "pages/entertainment-agency-m4-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/events-production-m1": [
+  {
+   "src": "pages/events-production-m1-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/events-production-m1-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/events-production-m2": [
+  {
+   "src": "pages/events-production-m2-760.webp",
+   "w": 667
+  },
+  {
+   "src": "pages/events-production-m2-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/events-production-m3": [
+  {
+   "src": "pages/events-production-m3-760.webp",
+   "w": 427
+  },
+  {
+   "src": "pages/events-production-m3-520.webp",
+   "w": 427
+  }
+ ],
+ "pages/events-production-m4": [
+  {
+   "src": "pages/events-production-m4-760.webp",
+   "w": 500
+  },
+  {
+   "src": "pages/events-production-m4-520.webp",
+   "w": 500
+  }
+ ],
+ "pages/record-label-m1": [
+  {
+   "src": "pages/record-label-m1-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/record-label-m1-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/record-label-m2": [
+  {
+   "src": "pages/record-label-m2-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/record-label-m2-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/record-label-m3": [
+  {
+   "src": "pages/record-label-m3-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/record-label-m3-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/record-label-m4": [
+  {
+   "src": "pages/record-label-m4-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/record-label-m4-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/artist-management-m1": [
+  {
+   "src": "pages/artist-management-m1-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/artist-management-m1-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/artist-management-m2": [
+  {
+   "src": "pages/artist-management-m2-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/artist-management-m2-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/artist-management-m3": [
+  {
+   "src": "pages/artist-management-m3-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/artist-management-m3-520.webp",
+   "w": 520
+  }
+ ],
+ "pages/artist-management-m4": [
+  {
+   "src": "pages/artist-management-m4-760.webp",
+   "w": 760
+  },
+  {
+   "src": "pages/artist-management-m4-520.webp",
+   "w": 520
   }
  ],
  "logo": [

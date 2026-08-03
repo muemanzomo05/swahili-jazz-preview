@@ -82,6 +82,7 @@
         "title": "Live Entertainment",
         "description": "Our ensemble plays small private rooms and main festival stages with the same energy. The sound is rooted in Swahili coastal tradition and shaped by modern jazz.",
         "icon": "sax",
+        "page": "live-entertainment",
         "image": { "slug": "svc-live", "alt": "Juma Tutu performing at the Safaricom International Jazz Festival" },
         "href": "@bookTheBand"
       },
@@ -89,6 +90,7 @@
         "title": "Entertainment Agency",
         "description": "We book and curate live music for hotels, corporate galas, weddings and cultural festivals. Tell us the room and the crowd, and we will put the right act in front of them.",
         "icon": "handshake",
+        "page": "entertainment-agency",
         "image": { "slug": "svc-agency", "alt": "Trumpet and saxophone players performing together on a festival stage" },
         "href": "@bookTheBand"
       },
@@ -96,6 +98,7 @@
         "title": "Events Production",
         "description": "We handle concept, sound design, staging and technical direction. One team stays accountable for how the whole night runs.",
         "icon": "sliders",
+        "page": "events-production",
         "image": { "slug": "svc-events", "alt": "The Swahili Jazz band ensemble together before a performance" },
         "href": "@bookTheBand"
       },
@@ -103,6 +106,7 @@
         "title": "Record Label",
         "description": "We record, produce and release original music from our own studio. It carries the sound of the Swahili coast to listeners anywhere.",
         "icon": "disc",
+        "page": "record-label",
         "image": { "slug": "svc-record", "alt": "The Swahili Jazz recording studio control room" },
         "href": "@bandcamp"
       },
@@ -110,6 +114,7 @@
         "title": "Artist Management",
         "description": "We represent artists and help them build careers with a clear plan. The ambition is international. The roots stay local.",
         "icon": "users",
+        "page": "artist-management",
         "image": { "slug": "svc-artist", "alt": "Swahili Jazz artists performing live on stage" },
         "href": "@bookTheBand"
       }

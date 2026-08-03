@@ -1,0 +1,404 @@
+{
+  "_readme": "One entry per service page. Rendered to services/<slug>.html by build/generate.mjs, sharing the nav, footer, booking form and floating buttons with the homepage. Order here sets the order of the Related Services cards.",
+
+  "breadcrumb": { "home": "Home", "section": "Services" },
+  "related": {
+    "eyebrow": "Keep Looking",
+    "headline": [
+      { "text": "The Other", "style": "plain" },
+      { "text": "Four Pillars", "style": "gold", "inline": true }
+    ],
+    "linkLabel": "View Service"
+  },
+
+  "pages": [
+    {
+      "slug": "live-entertainment",
+      "navLabel": "Live Entertainment",
+      "cardTitle": "Live Entertainment",
+      "title": "Live Entertainment | Swahili Jazz",
+      "description": "Swahili Jazz performs at corporate events, weddings, festivals, hotels, private celebrations and diplomatic functions across Kenya.",
+      "eyebrow": "Live Entertainment",
+      "headline": [
+        { "text": "Music That Fills", "style": "plain" },
+        { "text": "the Room", "style": "gold", "inline": true }
+      ],
+      "lede": "The band reads a room before it plays one. A quiet dinner set and a main festival stage need different things, and we bring the right one.",
+      "ctaLabel": "Book Live Entertainment",
+      "hero": { "slug": "pages/live-entertainment-hero", "alt": "Juma Tutu performing on stage at a jazz festival" },
+
+      "intro": {
+        "eyebrow": "The Offering",
+        "headline": [
+          { "text": "A Band Built for", "style": "plain" },
+          { "text": "Any Room", "style": "gold" }
+        ],
+        "paragraphs": [
+          "Swahili Jazz performs as a full band, a compact ensemble or a solo instrumentalist. The line-up is chosen around your event rather than sold to you as a fixed package.",
+          "Our sound sits where Swahili coastal tradition meets modern jazz. It works as background music over dinner, and it still works when the floor fills after midnight."
+        ],
+        "image": { "slug": "pages/live-entertainment-feature", "alt": "The Swahili Jazz horn section performing live" }
+      },
+
+      "offering": {
+        "eyebrow": "Where We Play",
+        "headline": [
+          { "text": "Events We", "style": "plain" },
+          { "text": "Perform At", "style": "gold", "inline": true }
+        ],
+        "items": [
+          { "title": "Corporate events", "text": "Launches, awards nights, conferences and staff celebrations, pitched at a level that suits the room." },
+          { "title": "Weddings", "text": "Ceremony, cocktail hour and reception, with the repertoire agreed with you beforehand." },
+          { "title": "Festivals", "text": "Main stage sets with the full band and a live horn section." },
+          { "title": "Hotels and resorts", "text": "Residencies and one-off nights for coastal and city properties." },
+          { "title": "Private celebrations", "text": "Birthdays, anniversaries and home events for smaller groups." },
+          { "title": "Diplomatic events", "text": "National days, receptions and cultural evenings for missions in Nairobi and Mombasa." },
+          { "title": "Cultural events", "text": "Heritage nights and public celebrations built around Kenyan music." }
+        ]
+      },
+
+      "why": {
+        "eyebrow": "Why Clients Book Us",
+        "headline": [
+          { "text": "What You Get", "style": "plain" },
+          { "text": "on the Night", "style": "gold", "inline": true }
+        ],
+        "items": [
+          { "icon": "trophy", "title": "A band that turns up ready", "text": "We arrive early, sound check properly and start on time." },
+          { "icon": "users", "title": "The right size ensemble", "text": "A soloist for a reception, a full band with horns for a festival." },
+          { "icon": "note", "title": "A set built for your event", "text": "We agree the repertoire with you instead of playing a fixed list." },
+          { "icon": "star", "title": "Names that vouch for us", "text": "Sarova, Kempinski, Hemingways, Safaricom and the World Bank have all booked us." }
+        ]
+      },
+
+      "media": {
+        "eyebrow": "On Stage",
+        "headline": [
+          { "text": "Recent", "style": "plain" },
+          { "text": "Performances", "style": "gold", "inline": true }
+        ],
+        "images": [
+          { "slug": "pages/live-entertainment-m1", "alt": "Juma Tutu playing saxophone at the Safaricom International Jazz Festival" },
+          { "slug": "pages/live-entertainment-m2", "alt": "Trumpet and saxophone players performing together on stage" },
+          { "slug": "pages/live-entertainment-m3", "alt": "The band performing under stage lighting" },
+          { "slug": "pages/live-entertainment-m4", "alt": "An open-air evening performance on the coast" },
+          { "slug": "pages/live-entertainment-m5", "alt": "The horn section during a live set" },
+          { "slug": "pages/live-entertainment-m6", "alt": "Saxophonist and trumpet player performing together" },
+          { "slug": "pages/live-entertainment-m7", "alt": "The band playing an indoor venue" },
+          { "slug": "pages/live-entertainment-m8", "alt": "A saxophone solo during an evening set" }
+        ]
+      }
+    },
+
+    {
+      "slug": "entertainment-agency",
+      "navLabel": "Entertainment Agency",
+      "cardTitle": "Entertainment Agency",
+      "title": "Entertainment Agency | Swahili Jazz",
+      "description": "Book bands, solo artists, saxophonists, DJs, MCs and traditional performers through one accountable contact in Kenya.",
+      "eyebrow": "Entertainment Agency",
+      "headline": [
+        { "text": "The Right Act,", "style": "plain" },
+        { "text": "Booked Properly", "style": "gold", "inline": true }
+      ],
+      "lede": "We book music for people who cannot afford for it to go wrong. Tell us the event and we put forward acts that fit it.",
+      "ctaLabel": "Request Entertainment",
+      "hero": { "slug": "pages/entertainment-agency-hero", "alt": "Trumpet and saxophone players performing at a festival" },
+
+      "intro": {
+        "eyebrow": "How It Works",
+        "headline": [
+          { "text": "One Call,", "style": "plain" },
+          { "text": "the Whole Line-up", "style": "gold" }
+        ],
+        "paragraphs": [
+          "Swahili Jazz books more than its own band. We represent and work alongside musicians across Kenya, so a single brief can cover the entire night.",
+          "You get one point of contact, one contract and one team responsible for the music. If an act falls through, replacing them is our problem rather than yours."
+        ],
+        "image": { "slug": "pages/entertainment-agency-feature", "alt": "Musicians performing together on a festival stage" }
+      },
+
+      "offering": {
+        "eyebrow": "What You Can Book",
+        "headline": [
+          { "text": "Acts on", "style": "plain" },
+          { "text": "Our Roster", "style": "gold", "inline": true }
+        ],
+        "items": [
+          { "title": "Bands", "text": "Full line-ups covering jazz, Afro-fusion, benga and popular repertoire." },
+          { "title": "Solo artists", "text": "Vocalists and instrumentalists for smaller rooms." },
+          { "title": "Saxophonists", "text": "Solo sax for receptions, dinners and ceremonies." },
+          { "title": "DJs", "text": "Sets that carry the night once the band finishes." },
+          { "title": "MCs", "text": "Hosts who keep a programme moving and know when to stop talking." },
+          { "title": "Traditional performers", "text": "Coastal and up-country groups, including drummers and dancers." },
+          { "title": "Cultural acts", "text": "Ensembles for heritage nights and diplomatic programmes." }
+        ]
+      },
+
+      "process": {
+        "eyebrow": "The Process",
+        "headline": [
+          { "text": "Four Steps,", "style": "plain" },
+          { "text": "No Surprises", "style": "gold", "inline": true }
+        ],
+        "steps": [
+          { "title": "Tell us the brief", "text": "Date, venue, audience and the feeling you are after. A rough budget helps us aim properly." },
+          { "title": "We propose acts", "text": "You get options with audio or video, and clear pricing against each one." },
+          { "title": "We confirm and contract", "text": "A single agreement covers the acts, the timings and the technical requirements." },
+          { "title": "We run the night", "text": "We handle load-in, sound check and the running order on the day." }
+        ]
+      },
+
+      "why": {
+        "eyebrow": "Why Businesses Trust Us",
+        "headline": [
+          { "text": "Booked Again", "style": "plain" },
+          { "text": "and Again", "style": "gold", "inline": true }
+        ],
+        "items": [
+          { "icon": "trophy", "title": "Fifteen years of events", "text": "More than 500 of them delivered." },
+          { "icon": "handshake", "title": "One accountable contact", "text": "No chasing individual artists the week of the event." },
+          { "icon": "sliders", "title": "Technical needs handled", "text": "We tell you what an act requires long before the day." },
+          { "icon": "star", "title": "Corporate and diplomatic experience", "text": "We understand protocol, run sheets and tight programmes." }
+        ]
+      },
+
+      "media": {
+        "eyebrow": "The Roster",
+        "headline": [
+          { "text": "Acts We", "style": "plain" },
+          { "text": "Have Placed", "style": "gold", "inline": true }
+        ],
+        "images": [
+          { "slug": "pages/entertainment-agency-m1", "alt": "Band performing on an outdoor stage" },
+          { "slug": "pages/entertainment-agency-m2", "alt": "The full ensemble together before a show" },
+          { "slug": "pages/entertainment-agency-m3", "alt": "Guitarist and saxophonist performing together" },
+          { "slug": "pages/entertainment-agency-m4", "alt": "Musicians playing at an evening event" }
+        ]
+      }
+    },
+
+    {
+      "slug": "events-production",
+      "navLabel": "Events Production",
+      "cardTitle": "Events Production",
+      "title": "Events Production | Swahili Jazz",
+      "description": "Stage design, sound, lighting, technical production and coordination for corporate events and festivals in Kenya.",
+      "eyebrow": "Events Production",
+      "headline": [
+        { "text": "Built, Run and", "style": "plain" },
+        { "text": "Handed Over", "style": "gold", "inline": true }
+      ],
+      "lede": "We build the event around the music rather than bolting music onto it. Stage, sound, lighting and running order come from one team.",
+      "ctaLabel": "Plan Your Event",
+      "hero": { "slug": "pages/events-production-hero", "alt": "A live stage production under coloured lighting" },
+
+      "intro": {
+        "eyebrow": "End to End",
+        "headline": [
+          { "text": "One Team for", "style": "plain" },
+          { "text": "the Whole Build", "style": "gold" }
+        ],
+        "paragraphs": [
+          "Swahili Jazz produces events in full. We take a concept, work out what it needs technically, build it on site and run it on the day.",
+          "Because we are musicians, the sound is designed for live performance instead of being treated as an afterthought. That difference is audible from the first song."
+        ],
+        "image": { "slug": "pages/events-production-feature", "alt": "The production team and ensemble before an event" }
+      },
+
+      "offering": {
+        "eyebrow": "What We Produce",
+        "headline": [
+          { "text": "Production", "style": "plain" },
+          { "text": "Services", "style": "gold", "inline": true }
+        ],
+        "items": [
+          { "title": "Stage design", "text": "Layouts and staging built around the act and the venue." },
+          { "title": "Sound", "text": "PA design, mixing and monitoring tuned for live bands." },
+          { "title": "Lighting", "text": "Rigs and looks that suit both the room and the programme." },
+          { "title": "Technical production", "text": "Power, cabling, backline and the crew to run all of it." },
+          { "title": "Event coordination", "text": "Run sheets, timings and supplier management." },
+          { "title": "Live music production", "text": "Musical direction, arrangement and rehearsal." },
+          { "title": "Corporate productions", "text": "Launches, conferences and awards nights." },
+          { "title": "Festival production", "text": "Multi-act stages with changeovers that keep to time." }
+        ]
+      },
+
+      "why": {
+        "eyebrow": "Why It Matters",
+        "headline": [
+          { "text": "The Difference on", "style": "plain" },
+          { "text": "the Day", "style": "gold", "inline": true }
+        ],
+        "items": [
+          { "icon": "sliders", "title": "Sound designed by players", "text": "We mix for live instruments because we play them." },
+          { "icon": "clock", "title": "Programmes that keep time", "text": "Changeovers are planned rather than improvised." },
+          { "icon": "users", "title": "One crew, one contact", "text": "Fewer suppliers means fewer gaps for things to fall through." },
+          { "icon": "trophy", "title": "Tested at scale", "text": "Festival stages and diplomatic receptions alike." }
+        ]
+      },
+
+      "media": {
+        "eyebrow": "In Production",
+        "headline": [
+          { "text": "Recent", "style": "plain" },
+          { "text": "Builds", "style": "gold", "inline": true }
+        ],
+        "images": [
+          { "slug": "pages/events-production-m1", "alt": "Stage lighting during a live performance" },
+          { "slug": "pages/events-production-m2", "alt": "An outdoor event set up in the evening" },
+          { "slug": "pages/events-production-m3", "alt": "A performer on a produced stage" },
+          { "slug": "pages/events-production-m4", "alt": "The band during a produced live set" }
+        ]
+      }
+    },
+
+    {
+      "slug": "record-label",
+      "navLabel": "Record Label",
+      "cardTitle": "Record Label",
+      "title": "Record Label | Swahili Jazz",
+      "description": "Recording, production, mixing, mastering, distribution and artist development from the Swahili Jazz studio.",
+      "eyebrow": "Record Label",
+      "headline": [
+        { "text": "Recorded on", "style": "plain" },
+        { "text": "the Coast", "style": "gold", "inline": true }
+      ],
+      "lede": "Our studio exists so the coastal sound gets recorded properly, by people who understand how it is meant to breathe.",
+      "ctaLabel": "Book Studio Time",
+      "hero": { "slug": "pages/record-label-hero", "alt": "The Swahili Jazz recording studio control room" },
+
+      "intro": {
+        "eyebrow": "The Studio",
+        "headline": [
+          { "text": "Where the Records", "style": "plain" },
+          { "text": "Get Made", "style": "gold" }
+        ],
+        "paragraphs": [
+          "Swahili Jazz runs its own studio and label. We record our catalogue there, and we open the room to artists working in the same tradition.",
+          "Sessions are engineered by people who play. That matters most when you are tracking horns, live drums and a room full of musicians at the same time."
+        ],
+        "image": { "slug": "pages/record-label-feature", "alt": "A recording session in progress at the studio" }
+      },
+
+      "offering": {
+        "eyebrow": "What We Do",
+        "headline": [
+          { "text": "Studio and", "style": "plain" },
+          { "text": "Label Services", "style": "gold", "inline": true }
+        ],
+        "items": [
+          { "title": "Recording", "text": "Tracking for full bands, horn sections and solo instrumentalists." },
+          { "title": "Music production", "text": "Arrangement and direction, taking an idea through to a finished record." },
+          { "title": "Mixing", "text": "Balanced mixes that keep the dynamics of a live performance intact." },
+          { "title": "Mastering", "text": "Final masters prepared for streaming and for physical release." },
+          { "title": "Music distribution", "text": "Getting releases onto Spotify, Bandcamp and the rest of the platforms." },
+          { "title": "Artist development", "text": "Working with artists across a body of work rather than a single track." },
+          { "title": "Original productions", "text": "Commissioned pieces and label releases of our own." }
+        ]
+      },
+
+      "why": {
+        "eyebrow": "Why Record Here",
+        "headline": [
+          { "text": "A Room That", "style": "plain" },
+          { "text": "Understands You", "style": "gold", "inline": true }
+        ],
+        "items": [
+          { "icon": "disc", "title": "Engineered by musicians", "text": "The people behind the desk read the same charts you do." },
+          { "icon": "note", "title": "Built for live instruments", "text": "Horns, drums and a full band tracked together in one room." },
+          { "icon": "globe", "title": "Release handled", "text": "Distribution and platform delivery are part of the service." },
+          { "icon": "users", "title": "Long-term work", "text": "We would rather build a catalogue with you than sell you one session." }
+        ]
+      },
+
+      "media": {
+        "eyebrow": "The Room",
+        "headline": [
+          { "text": "Inside", "style": "plain" },
+          { "text": "the Studio", "style": "gold", "inline": true }
+        ],
+        "images": [
+          { "slug": "pages/record-label-m1", "alt": "The studio control room and mixing desk" },
+          { "slug": "pages/record-label-m2", "alt": "Musicians tracking together in the studio" },
+          { "slug": "pages/record-label-m3", "alt": "The horn section recording a session" },
+          { "slug": "pages/record-label-m4", "alt": "A rehearsal and recording session in progress" }
+        ]
+      }
+    },
+
+    {
+      "slug": "artist-management",
+      "navLabel": "Artist Management",
+      "cardTitle": "Artist Management",
+      "title": "Artist Management | Swahili Jazz",
+      "description": "Talent development, career and brand management, releases, media and business affairs for musicians in Kenya.",
+      "eyebrow": "Artist Management",
+      "headline": [
+        { "text": "Careers, Not Just", "style": "plain" },
+        { "text": "Bookings", "style": "gold", "inline": true }
+      ],
+      "lede": "We manage a small roster properly rather than a large one loosely. The aim is a career that still works in ten years.",
+      "ctaLabel": "Work With Us",
+      "hero": { "slug": "pages/artist-management-hero", "alt": "A Swahili Jazz artist photographed with his saxophone" },
+
+      "intro": {
+        "eyebrow": "The Approach",
+        "headline": [
+          { "text": "Built Around", "style": "plain" },
+          { "text": "the Artist", "style": "gold" }
+        ],
+        "paragraphs": [
+          "Swahili Jazz manages musicians at different stages, from players still finding their sound to established names touring internationally.",
+          "The work is practical. Rehearsal discipline, sensible fees, releases that actually land, and a plan the artist has agreed to rather than been handed."
+        ],
+        "image": { "slug": "pages/artist-management-feature", "alt": "Portrait of a Swahili Jazz artist with his saxophone" }
+      },
+
+      "offering": {
+        "eyebrow": "What Management Covers",
+        "headline": [
+          { "text": "Where We", "style": "plain" },
+          { "text": "Get Involved", "style": "gold", "inline": true }
+        ],
+        "items": [
+          { "title": "Talent development", "text": "Musicianship, repertoire and stagecraft." },
+          { "title": "Career management", "text": "Planning across seasons instead of one booking at a time." },
+          { "title": "Brand development", "text": "Photography, positioning and the story an artist tells." },
+          { "title": "Performance opportunities", "text": "Access to our own events and to our client network." },
+          { "title": "Music releases", "text": "Recording, release scheduling and distribution through our label." },
+          { "title": "Media exposure", "text": "Press, radio and platform pitching." },
+          { "title": "Business management", "text": "Contracts, fees, royalties and the paperwork most artists avoid." }
+        ]
+      },
+
+      "why": {
+        "eyebrow": "Why Artists Sign",
+        "headline": [
+          { "text": "What We Bring", "style": "plain" },
+          { "text": "to a Career", "style": "gold", "inline": true }
+        ],
+        "items": [
+          { "icon": "users", "title": "A small roster", "text": "Few enough artists that each one gets real attention." },
+          { "icon": "trophy", "title": "Real stages to play", "text": "Our own events and our client network open doors quickly." },
+          { "icon": "disc", "title": "A label in the building", "text": "Recording and release sit under the same roof as management." },
+          { "icon": "handshake", "title": "Honest business", "text": "Clear splits, written agreements and royalties that get paid." }
+        ]
+      },
+
+      "media": {
+        "eyebrow": "The Roster",
+        "headline": [
+          { "text": "Artists We", "style": "plain" },
+          { "text": "Represent", "style": "gold", "inline": true }
+        ],
+        "images": [
+          { "slug": "pages/artist-management-m1", "alt": "Studio portrait of a saxophonist" },
+          { "slug": "pages/artist-management-m2", "alt": "Portrait of an artist with his saxophone" },
+          { "slug": "pages/artist-management-m3", "alt": "Studio portrait of an artist wearing headphones" },
+          { "slug": "pages/artist-management-m4", "alt": "Two Swahili Jazz artists performing together" }
+        ]
+      }
+    }
+  ]
+}
