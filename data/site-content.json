@@ -1,0 +1,242 @@
+{
+  "_readme": "Single source of truth for all site content. href values written as '@name' or '@social.name' resolve against Assets/juma-tutu-links.json at build time. Run `node build/generate.mjs` after editing.",
+
+  "site": {
+    "name": "Swahili Jazz",
+    "wordmark": "SWAHILI JAZZ",
+    "slogan": "The Sounds of the Soul",
+    "title": "Swahili Jazz — Timeless Culture. Unforgettable Experiences.",
+    "description": "Swahili Jazz is a premier Kenyan entertainment company delivering world-class live music, event production, artist management, record label services and entertainment consultancy.",
+    "locale": "en",
+    "themeColor": "#131212",
+    "_noindex": "Set false at launch. While true the build emits noindex/nofollow and a disallow-all robots.txt so client-review deploys never reach search results.",
+    "noindex": true
+  },
+
+  "nav": {
+    "links": [
+      { "label": "Home", "href": "#home" },
+      { "label": "About", "href": "#about" },
+      { "label": "Services", "href": "#services" },
+      { "label": "Events", "href": "#events" },
+      { "label": "Media", "href": "#media" }
+    ],
+    "cta": { "label": "Book the Band", "href": "@bookTheBand", "external": true }
+  },
+
+  "hero": {
+    "eyebrow": "Authentic Live Music",
+    "headline": [
+      { "text": "Timeless Culture.", "style": "plain" },
+      { "text": "Unforgettable", "style": "metallic" },
+      { "text": "Experiences.", "style": "plain" }
+    ],
+    "disciplines": [
+      "Live Entertainment",
+      "Events Production",
+      "Entertainment Agency",
+      "Record Label",
+      "Artist Management"
+    ],
+    "buttons": [
+      { "label": "Book the Band", "href": "@bookTheBand", "variant": "gold", "icon": "arrow-right", "external": true },
+      { "label": "Watch Live", "href": "@watchLive", "variant": "outline", "icon": "play", "external": true }
+    ],
+    "scrollLabel": "Scroll",
+    "image": { "slug": "hero", "alt": "Juma Tutu performing on saxophone under stage lights" }
+  },
+
+  "about": {
+    "id": "about",
+    "eyebrow": "About the Company",
+    "headline": [
+      { "text": "Where Tradition", "style": "plain" },
+      { "text": "Meets Innovation", "style": "gold" }
+    ],
+    "image": { "slug": "studio", "alt": "The Swahili Jazz recording studio with mixing desk and illuminated logo" },
+    "badge": { "top": "Est.", "bottom": "2010" },
+    "paragraphs": [
+      "Swahili Jazz is a premier Kenyan entertainment company specializing in world-class live music entertainment, event production, artist management, record label services, and entertainment consultancy. We create exceptional experiences for corporate events, festivals, diplomatic missions, hospitality venues, private celebrations, and cultural productions, delivering creativity, professionalism, and excellence at every stage.",
+      "Founded by renowned saxophonist, composer, music director, and cultural ambassador Juma Tutu, the company is built on decades of industry experience and trusted partnerships. Juma is a respected and accomplished musician who was conferred the National Hero title by the Government of Kenya in recognition of his outstanding contribution to the nation's music, arts, and cultural heritage.",
+      "Guided by our slogan, “The Sounds of the Soul,” Swahili Jazz is committed to connecting people through music, nurturing artistic excellence, and delivering unforgettable entertainment experiences in Kenya and around the world."
+    ],
+    "stats": [
+      { "value": "15+", "label": "Years on Stage", "style": "metallic" },
+      { "value": "500+", "label": "Events Delivered", "style": "metallic" },
+      { "value": "20+", "label": "Resident Artists", "style": "metallic" }
+    ],
+    "cta": { "label": "Book the Band", "href": "@bookTheBand", "variant": "outline", "icon": "arrow-right", "external": true }
+  },
+
+  "services": {
+    "id": "services",
+    "eyebrow": "What We Do",
+    "headline": [
+      { "text": "Five Core Pillars.", "style": "plain" },
+      { "text": "One Passion.", "style": "gold" }
+    ],
+    "linkLabel": "Learn More",
+    "items": [
+      {
+        "title": "Live Entertainment",
+        "description": "From intimate gatherings to grand festival stages, our ensemble delivers soul-stirring performances rooted in Swahili coastal tradition and modern jazz.",
+        "icon": "sax",
+        "image": { "slug": "svc-live", "alt": "Juma Tutu performing at the Safaricom International Jazz Festival" },
+        "href": "@bookTheBand"
+      },
+      {
+        "title": "Entertainment Agency",
+        "description": "A full-service agency curating live music for hotels, corporate galas, weddings and cultural festivals — tailored, reliable, unforgettable.",
+        "icon": "handshake",
+        "image": { "slug": "svc-agency", "alt": "Trumpet and saxophone players performing together on a festival stage" },
+        "href": "@bookTheBand"
+      },
+      {
+        "title": "Events Production",
+        "description": "Full-scale event production — from concept and sound design to staging and technical direction — crafted to deliver seamless, world-class live experiences.",
+        "icon": "sliders",
+        "image": { "slug": "svc-events", "alt": "The Swahili Jazz band ensemble together before a performance" },
+        "href": "@bookTheBand"
+      },
+      {
+        "title": "Record Label",
+        "description": "We produce, record and distribute original music that celebrates the sound of the Swahili coast — from our studio to audiences worldwide.",
+        "icon": "disc",
+        "image": { "slug": "svc-record", "alt": "The Swahili Jazz recording studio control room" },
+        "href": "@bandcamp"
+      },
+      {
+        "title": "Artist Management",
+        "description": "We develop and represent exceptional talent, guiding careers with integrity, vision and a global ambition grounded in local heritage.",
+        "icon": "users",
+        "image": { "slug": "svc-artist", "alt": "Swahili Jazz artists performing live on stage" },
+        "href": "@bookTheBand"
+      }
+    ]
+  },
+
+  "why": {
+    "eyebrow": "Why Choose Swahili Jazz",
+    "headline": [
+      { "text": "A Standard", "style": "plain" },
+      { "text": "Beyond the Stage", "style": "gold" }
+    ],
+    "background": { "slug": "why-bg", "alt": "" },
+    "items": [
+      { "icon": "trophy", "value": "500+", "label": "Events Delivered", "description": "From intimate sets to sold-out festival stages." },
+      { "icon": "note", "value": "15", "label": "Years on Stage", "description": "A legacy built on the authentic coastal sound." },
+      { "icon": "users", "value": "20+", "label": "Resident Artists", "description": "A versatile roster of exceptional musicians." },
+      { "icon": "globe", "value": "4", "label": "Continents Touring", "description": "Carrying Swahili jazz across the globe." },
+      { "icon": "star", "value": "5-Star", "label": "Client Rating", "description": "Trusted by brands, venues and embassies." }
+    ]
+  },
+
+  "events": {
+    "id": "events",
+    "eyebrow": "Upcoming Events",
+    "headline": [
+      { "text": "Where to Find Us", "style": "plain" },
+      { "text": "Next", "style": "gold", "inline": true }
+    ],
+    "detailsLabel": "Details",
+    "items": [
+      { "day": "12", "month": "Sep", "title": "Sunset Jazz Sessions", "venue": "Sarova Whitesands, Mombasa", "time": "7:00 PM", "href": "@bookTheBand" },
+      { "day": "03", "month": "Oct", "title": "Safaricom Jazz Festival", "venue": "KICC, Nairobi", "time": "6:00 PM", "href": "@bookTheBand" },
+      { "day": "18", "month": "Oct", "title": "Coastal Culture Night", "venue": "Hemingways Watamu", "time": "8:00 PM", "href": "@bookTheBand" },
+      { "day": "09", "month": "Nov", "title": "Alliance Française Live", "venue": "Alliance Française, Nairobi", "time": "7:30 PM", "href": "@bookTheBand" }
+    ],
+    "cta": { "label": "View All Events", "href": "@social.facebook", "variant": "outline", "external": true }
+  },
+
+  "clients": {
+    "eyebrow": "Trusted By",
+    "headline": [
+      { "text": "Clients We’ve", "style": "plain" },
+      { "text": "Worked With", "style": "gold", "inline": true }
+    ],
+    "logos": [
+      { "slug": "sarova-hotels-resorts", "name": "Sarova Hotels & Resorts" },
+      { "slug": "kempinski", "name": "Kempinski" },
+      { "slug": "safaricom", "name": "Safaricom" },
+      { "slug": "republic-of-kenya", "name": "Republic of Kenya" },
+      { "slug": "alliance-francaise-mombasa", "name": "Alliance Française Mombasa" },
+      { "slug": "radisson-blu", "name": "Radisson Blu" },
+      { "slug": "hemingways-collection", "name": "Hemingways Collection" },
+      { "slug": "world-bank", "name": "The World Bank" }
+    ],
+    "cta": { "label": "View All Clients", "href": "@bookTheBand", "variant": "outline", "external": true }
+  },
+
+  "gallery": {
+    "id": "media",
+    "eyebrow": "Media Gallery",
+    "headline": [
+      { "text": "Moments", "style": "plain" },
+      { "text": "in Motion", "style": "gold", "inline": true }
+    ],
+    "autoplayMs": 6000,
+    "startIndex": 8,
+    "items": [
+      { "slug": "gallery/g01", "caption": "Headlining the Safaricom International Jazz Festival" },
+      { "slug": "gallery/g02", "caption": "Corporate showcase with partners and collaborators" },
+      { "slug": "gallery/g03", "caption": "Juma Tutu receiving the National Hero honour" },
+      { "slug": "gallery/g04", "caption": "The horn section in full flight" },
+      { "slug": "gallery/g05", "caption": "An open-air evening set on the coast" },
+      { "slug": "gallery/g06", "caption": "The Swahili Jazz ensemble together backstage" },
+      { "slug": "gallery/g07", "caption": "Sharing the stage with Jimmy Dludlu" },
+      { "slug": "gallery/g08", "caption": "Saxophonist and trumpet player performing together" },
+      { "slug": "gallery/g09", "caption": "Late-night grooves under the festival lights" },
+      { "slug": "gallery/g10", "caption": "Coastal rhythms with the full band" }
+    ]
+  },
+
+  "cta": {
+    "eyebrow": "Book the Band",
+    "headline": [
+      { "text": "Ready to bring The Sounds of the Soul", "style": "plain" },
+      { "text": "to your stage?", "style": "metallic", "inline": true }
+    ],
+    "button": { "label": "Enquire Now", "href": "@bookTheBand", "variant": "gold", "icon": "arrow-right", "external": true }
+  },
+
+  "footer": {
+    "id": "contact",
+    "tagline": "Bringing the soul of the East African coast to every stage — blending timeless Swahili tradition with the language of jazz.",
+    "contact": [
+      { "icon": "mail", "label": "swahilijazz@yahoo.com", "href": "@contactEmail" },
+      { "icon": "phone", "label": "+254 715 706 236", "href": "@social.whatsapp", "external": true }
+    ],
+    "newsletter": {
+      "heading": "Stay Connected",
+      "text": "Shows, releases and stories — straight to your inbox.",
+      "placeholder": "Your email address",
+      "button": "Subscribe",
+      "success": "Thank you — you’re on the list.",
+      "action": "@contactEmail"
+    },
+    "explore": {
+      "heading": "Explore",
+      "links": [
+        { "label": "Home", "href": "#home" },
+        { "label": "About", "href": "#about" },
+        { "label": "Services", "href": "#services" },
+        { "label": "Events", "href": "#events" },
+        { "label": "Media", "href": "#media" }
+      ]
+    },
+    "follow": {
+      "heading": "Follow Us",
+      "links": [
+        { "icon": "facebook", "label": "Facebook", "href": "@social.facebook" },
+        { "icon": "instagram", "label": "Instagram", "href": "@social.instagram" },
+        { "icon": "youtube", "label": "YouTube", "href": "@social.youtube" },
+        { "icon": "tiktok", "label": "TikTok", "href": "@social.tiktok" },
+        { "icon": "whatsapp", "label": "WhatsApp", "href": "@social.whatsapp" },
+        { "icon": "spotify", "label": "Spotify", "href": "@social.spotify" },
+        { "icon": "bandcamp", "label": "Bandcamp", "href": "@social.bandcamp" }
+      ]
+    },
+    "copyright": "© 2026 Swahili Jazz. All rights reserved.",
+    "credit": { "before": "Designed with", "after": "for Culture & Music" }
+  }
+}

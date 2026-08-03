@@ -1,0 +1,10 @@
+# supplied source archive (originals live unzipped in Assets/)
+Assets.zip
+
+# deploy bundles
+dist/
+*.zip
+
+node_modules/
+.DS_Store
+Thumbs.db

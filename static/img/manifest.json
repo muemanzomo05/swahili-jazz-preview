@@ -1,0 +1,334 @@
+{
+ "hero": [
+  {
+   "src": "hero-1536.webp",
+   "w": 1536
+  },
+  {
+   "src": "hero-1100.webp",
+   "w": 1100
+  },
+  {
+   "src": "hero-760.webp",
+   "w": 760
+  }
+ ],
+ "hero-portrait": [
+  {
+   "src": "hero-portrait-900.webp",
+   "w": 768
+  },
+  {
+   "src": "hero-portrait-620.webp",
+   "w": 620
+  }
+ ],
+ "studio": [
+  {
+   "src": "studio-1240.webp",
+   "w": 1240
+  },
+  {
+   "src": "studio-900.webp",
+   "w": 900
+  },
+  {
+   "src": "studio-640.webp",
+   "w": 640
+  }
+ ],
+ "svc-live": [
+  {
+   "src": "svc-live-900.webp",
+   "w": 900
+  },
+  {
+   "src": "svc-live-620.webp",
+   "w": 620
+  }
+ ],
+ "svc-agency": [
+  {
+   "src": "svc-agency-900.webp",
+   "w": 682
+  },
+  {
+   "src": "svc-agency-620.webp",
+   "w": 620
+  }
+ ],
+ "svc-events": [
+  {
+   "src": "svc-events-900.webp",
+   "w": 900
+  },
+  {
+   "src": "svc-events-620.webp",
+   "w": 620
+  }
+ ],
+ "svc-record": [
+  {
+   "src": "svc-record-900.webp",
+   "w": 900
+  },
+  {
+   "src": "svc-record-620.webp",
+   "w": 620
+  }
+ ],
+ "svc-artist": [
+  {
+   "src": "svc-artist-900.webp",
+   "w": 667
+  },
+  {
+   "src": "svc-artist-620.webp",
+   "w": 620
+  }
+ ],
+ "why-bg": [
+  {
+   "src": "why-bg-2000.webp",
+   "w": 1983
+  },
+  {
+   "src": "why-bg-1400.webp",
+   "w": 1400
+  },
+  {
+   "src": "why-bg-900.webp",
+   "w": 900
+  }
+ ],
+ "gallery/g01": [
+  {
+   "src": "gallery/g01-1600.webp",
+   "w": 1600
+  },
+  {
+   "src": "gallery/g01-1000.webp",
+   "w": 1000
+  }
+ ],
+ "gallery/g01-thumb": [
+  {
+   "src": "gallery/g01-thumb-260.webp",
+   "w": 260
+  }
+ ],
+ "gallery/g02": [
+  {
+   "src": "gallery/g02-1600.webp",
+   "w": 1402
+  },
+  {
+   "src": "gallery/g02-1000.webp",
+   "w": 1000
+  }
+ ],
+ "gallery/g02-thumb": [
+  {
+   "src": "gallery/g02-thumb-260.webp",
+   "w": 260
+  }
+ ],
+ "gallery/g03": [
+  {
+   "src": "gallery/g03-1600.webp",
+   "w": 1411
+  },
+  {
+   "src": "gallery/g03-1000.webp",
+   "w": 1000
+  }
+ ],
+ "gallery/g03-thumb": [
+  {
+   "src": "gallery/g03-thumb-260.webp",
+   "w": 260
+  }
+ ],
+ "gallery/g04": [
+  {
+   "src": "gallery/g04-1600.webp",
+   "w": 750
+  },
+  {
+   "src": "gallery/g04-1000.webp",
+   "w": 750
+  }
+ ],
+ "gallery/g04-thumb": [
+  {
+   "src": "gallery/g04-thumb-260.webp",
+   "w": 260
+  }
+ ],
+ "gallery/g05": [
+  {
+   "src": "gallery/g05-1600.webp",
+   "w": 750
+  },
+  {
+   "src": "gallery/g05-1000.webp",
+   "w": 750
+  }
+ ],
+ "gallery/g05-thumb": [
+  {
+   "src": "gallery/g05-thumb-260.webp",
+   "w": 260
+  }
+ ],
+ "gallery/g06": [
+  {
+   "src": "gallery/g06-1600.webp",
+   "w": 1240
+  },
+  {
+   "src": "gallery/g06-1000.webp",
+   "w": 1000
+  }
+ ],
+ "gallery/g06-thumb": [
+  {
+   "src": "gallery/g06-thumb-260.webp",
+   "w": 260
+  }
+ ],
+ "gallery/g07": [
+  {
+   "src": "gallery/g07-1600.webp",
+   "w": 1239
+  },
+  {
+   "src": "gallery/g07-1000.webp",
+   "w": 1000
+  }
+ ],
+ "gallery/g07-thumb": [
+  {
+   "src": "gallery/g07-thumb-260.webp",
+   "w": 260
+  }
+ ],
+ "gallery/g08": [
+  {
+   "src": "gallery/g08-1600.webp",
+   "w": 750
+  },
+  {
+   "src": "gallery/g08-1000.webp",
+   "w": 750
+  }
+ ],
+ "gallery/g08-thumb": [
+  {
+   "src": "gallery/g08-thumb-260.webp",
+   "w": 260
+  }
+ ],
+ "gallery/g09": [
+  {
+   "src": "gallery/g09-1600.webp",
+   "w": 1240
+  },
+  {
+   "src": "gallery/g09-1000.webp",
+   "w": 1000
+  }
+ ],
+ "gallery/g09-thumb": [
+  {
+   "src": "gallery/g09-thumb-260.webp",
+   "w": 260
+  }
+ ],
+ "gallery/g10": [
+  {
+   "src": "gallery/g10-1600.webp",
+   "w": 750
+  },
+  {
+   "src": "gallery/g10-1000.webp",
+   "w": 750
+  }
+ ],
+ "gallery/g10-thumb": [
+  {
+   "src": "gallery/g10-thumb-260.webp",
+   "w": 260
+  }
+ ],
+ "logo": [
+  {
+   "src": "logo-320.webp",
+   "w": 320
+  },
+  {
+   "src": "logo-160.webp",
+   "w": 160
+  },
+  {
+   "src": "logo-96.webp",
+   "w": 96
+  }
+ ],
+ "client:alliance-francaise-mombasa": [
+  {
+   "src": "clients/alliance-francaise-mombasa.webp",
+   "w": 400,
+   "h": 252
+  }
+ ],
+ "client:kempinski": [
+  {
+   "src": "clients/kempinski.webp",
+   "w": 250,
+   "h": 99
+  }
+ ],
+ "client:radisson-blu": [
+  {
+   "src": "clients/radisson-blu.webp",
+   "w": 250,
+   "h": 76
+  }
+ ],
+ "client:republic-of-kenya": [
+  {
+   "src": "clients/republic-of-kenya.webp",
+   "w": 400,
+   "h": 395
+  }
+ ],
+ "client:safaricom": [
+  {
+   "src": "clients/safaricom.webp",
+   "w": 118,
+   "h": 25
+  }
+ ],
+ "client:world-bank": [
+  {
+   "src": "clients/world-bank.webp",
+   "w": 330,
+   "h": 67
+  }
+ ],
+ "client:hemingways-collection": [
+  {
+   "src": "clients/hemingways-collection.svg",
+   "w": 0,
+   "h": 0
+  }
+ ],
+ "client:sarova-hotels-resorts": [
+  {
+   "src": "clients/sarova-hotels-resorts.svg",
+   "w": 0,
+   "h": 0
+  }
+ ]
+}

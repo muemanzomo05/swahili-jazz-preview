@@ -1,0 +1,24 @@
+{
+  "website": "https://jumatutu.sasahivi.com/",
+  "bookTheBand": "mailto:swahilijazz@yahoo.com?subject=Booking%20enquiry%20for%20Juma%20Tutu%20%26%20The%20Swahili%20Jazz%20Band",
+  "contactEmail": "mailto:swahilijazz@yahoo.com",
+  "watchLive": "https://www.youtube.com/watch?v=7WbWYkx0TjY",
+  "social": {
+    "facebook": "https://www.facebook.com/jumatutuofficial/",
+    "instagram": "https://www.instagram.com/jumatutu/",
+    "youtube": "https://www.youtube.com/@tutuuploads",
+    "tiktok": "https://www.tiktok.com/@jumatutu.tutu",
+    "whatsapp": "https://wa.me/254715706236",
+    "spotify": "https://open.spotify.com/artist/0htsvTmLQG9c0Th2Xo7Wgx",
+    "bandcamp": "https://jumatutu.bandcamp.com/"
+  },
+  "implementation": {
+    "externalLinksTarget": "_blank",
+    "externalLinksRel": "noopener noreferrer"
+  },
+  "notes": {
+    "watchLive": "Official Artist Channel performance uploaded 19 December 2024.",
+    "booking": "Booking email is published in the official artist video description.",
+    "whatsapp": "Public contact number listed for Juma Tutu & The Swahili Jazz Band; confirm it with the band before launch if possible."
+  }
+}
