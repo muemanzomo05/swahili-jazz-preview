@@ -78,6 +78,24 @@
     nodes.forEach(function (n) { io.observe(n); });
   })();
 
+  /* ------------------------------------------------------------ national recognition */
+  (function recognition() {
+    var modal = $('[data-recognition-modal]');
+    var open = $('[data-recognition-open]');
+    if (!modal || !open) return;
+    var close = $$('[data-recognition-close]', modal);
+    var previous = null;
+    function set(show) {
+      modal.hidden = !show;
+      document.body.classList.toggle('is-locked', show);
+      if (show) { previous = document.activeElement; $('.recognition-modal__close', modal).focus(); }
+      else if (previous) { previous.focus(); }
+    }
+    open.addEventListener('click', function (e) { e.preventDefault(); set(true); });
+    close.forEach(function (el) { el.addEventListener('click', function () { set(false); }); });
+    addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) set(false); });
+  })();
+
   /* ------------------------------------------------------------ scrollspy */
   (function spy() {
     var links = $$('.nav__link');

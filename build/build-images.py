@@ -92,6 +92,7 @@ cover("hero photo.png", "hero-portrait", 3 / 4, [900, 620], focus=(0.47, 0.25), 
 
 print("about / studio")
 cover("studio.png", "studio", 5 / 4, [1240, 900, 640], focus=(0.5, 0.5))
+cover("National Hero.png", "recognition", 4 / 3, [560, 360], focus=(0.5, 0.4), q=82)
 
 print("services")
 for f, slug, foc in [
