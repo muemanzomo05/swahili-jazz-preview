@@ -226,6 +226,173 @@
     restart();
   })();
 
+  /* ------------------------------------------------------------ video facade */
+  (function facade() {
+    $$('[data-facade]').forEach(function (box) {
+      var btn = $('[data-facade-play]', box);
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var id = box.getAttribute('data-video');
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + id +
+          '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+        f.title = btn.textContent.trim() || 'Video';
+        f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+        f.allowFullscreen = true;
+        f.setAttribute('frameborder', '0');
+        box.classList.add('is-playing');
+        box.appendChild(f);
+        f.focus({ preventScroll: true });
+      });
+    });
+  })();
+
+  /* ------------------------------------------------------------ booking form */
+  (function booking() {
+    var form = $('[data-booking]');
+    if (!form) return;
+
+    var copyNode = $('[data-form-copy]', form);
+    var COPY = {};
+    try { COPY = JSON.parse(copyNode.textContent); } catch (e) { /* keep defaults */ }
+
+    var statusBox = $('[data-form-status]', form);
+    var statusHead = $('[data-status-heading]', form);
+    var statusBody = $('[data-status-body]', form);
+    var fallback = $('[data-status-fallback]', form);
+    var submit = $('.form__submit', form);
+    var label = $('[data-submit-label]', form);
+    var endpoint = form.getAttribute('data-endpoint');
+    var mailto = form.getAttribute('data-mailto');
+
+    function show(state, heading, body, withFallback) {
+      statusBox.hidden = false;
+      statusBox.classList.toggle('is-error', state === 'error');
+      statusHead.textContent = heading || '';
+      statusBody.textContent = body || '';
+      fallback.hidden = !withFallback;
+    }
+
+    /* inline validation, one message per field */
+    function fieldOf(el) { return el.closest('.field'); }
+    function clearError(el) {
+      var f = fieldOf(el);
+      if (!f) return;
+      f.classList.remove('is-invalid');
+      var m = $('.field__error', f);
+      if (m) m.remove();
+      el.removeAttribute('aria-invalid');
+    }
+    function setError(el, msg) {
+      var f = fieldOf(el);
+      if (!f) return;
+      clearError(el);
+      f.classList.add('is-invalid');
+      el.setAttribute('aria-invalid', 'true');
+      var p = document.createElement('p');
+      p.className = 'field__error';
+      p.textContent = msg;
+      f.appendChild(p);
+    }
+    function validate() {
+      var bad = null;
+      $$('input, select, textarea', form).forEach(function (el) {
+        if (el.name === '_company') return;
+        clearError(el);
+        if (!el.checkValidity()) {
+          var msg = el.validity.valueMissing ? 'This one is needed'
+            : el.validity.typeMismatch ? 'Check this is correct'
+            : 'Check this field';
+          setError(el, msg);
+          if (!bad) bad = el;
+        }
+      });
+      return bad;
+    }
+    $$('input, select, textarea', form).forEach(function (el) {
+      el.addEventListener('input', function () { clearError(el); });
+      el.addEventListener('change', function () { clearError(el); });
+    });
+
+    function values() {
+      var out = [];
+      $$('input, select, textarea', form).forEach(function (el) {
+        if (!el.name || el.name === '_company' || !el.value.trim()) return;
+        var lab = $('label[for="' + el.id + '"]', form);
+        var name = lab ? lab.textContent.replace('*', '').trim() : el.name;
+        out.push([name, el.value.trim()]);
+      });
+      return out;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // honeypot: silently accept, do nothing
+      if (form.elements._company && form.elements._company.value) return;
+
+      var bad = validate();
+      if (bad) {
+        bad.focus({ preventScroll: false });
+        return;
+      }
+
+      var pairs = values();
+
+      /* no endpoint configured -> compose a structured email and show a
+         visible fallback, because mailto can fail with no error at all */
+      if (!endpoint) {
+        var body = pairs.map(function (p) { return p[0] + ': ' + p[1]; }).join('\n');
+        var href = mailto + '?subject=' + encodeURIComponent('Booking enquiry via the website') +
+          '&body=' + encodeURIComponent(body);
+        window.location.href = href;
+        show('note', COPY.mailtoNote.heading, COPY.mailtoNote.body, true);
+        return;
+      }
+
+      /* real endpoint -> POST it */
+      form.classList.add('is-sending');
+      if (label) label.textContent = COPY.sending || 'Sending';
+      var data = new FormData(form);
+      data.delete('_company');
+
+      fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          show('ok', COPY.success.heading, COPY.success.body, false);
+          form.reset();
+        })
+        .catch(function () {
+          show('error', COPY.error.heading, COPY.error.body, true);
+        })
+        .then(function () {
+          form.classList.remove('is-sending');
+          if (label) label.textContent = COPY.submit || 'Send Enquiry';
+        });
+    });
+
+    /* copy-the-address fallback */
+    $$('[data-copy]', form).forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var text = btn.getAttribute('data-copy');
+        var span = $('span', btn);
+        var done = function () {
+          if (!span) return;
+          span.textContent = btn.getAttribute('data-copied-label');
+          setTimeout(function () { span.textContent = btn.getAttribute('data-copy-label'); }, 2200);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, function () {});
+        } else {
+          var t = document.createElement('textarea');
+          t.value = text; document.body.appendChild(t); t.select();
+          try { document.execCommand('copy'); done(); } catch (err) { /* ignore */ }
+          document.body.removeChild(t);
+        }
+      });
+    });
+  })();
+
   /* ------------------------------------------------------------ newsletter */
   (function newsletter() {
     var form = $('[data-newsletter]');

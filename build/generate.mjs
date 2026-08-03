@@ -351,14 +351,131 @@ function gallery() {
 </section>`;
 }
 
+/** Listen: a click-to-load YouTube facade plus the Spotify artist embed.
+ *  Both IDs are parsed from the supplied links JSON, never hardcoded. */
+function listen() {
+  const l = C.listen;
+  if (!l) return '';
+
+  const watch = url('@watchLive');
+  const videoId = (watch.match(/[?&]v=([\w-]{6,})/) || watch.match(/youtu\.be\/([\w-]{6,})/) || [])[1];
+  if (!videoId) throw new Error(`Could not parse a YouTube id from watchLive: ${watch}`);
+
+  const spotifyUrl = url('@social.spotify');
+  const artistId = (spotifyUrl.match(/artist\/([A-Za-z0-9]+)/) || [])[1];
+  if (!artistId) throw new Error(`Could not parse a Spotify artist id from: ${spotifyUrl}`);
+
+  const platforms = l.platforms
+    .map((p) => {
+      const href = url(p.href);
+      return `<a class="platform" href="${esc(href)}"${linkAttrs(href)}>${icon(p.icon)}<span>${esc(p.label)}</span></a>`;
+    })
+    .join('');
+
+  return `<section class="listen section" id="${l.id}">
+  <div class="shell">
+    <div class="section__head" data-reveal-group>
+      ${eyebrow(l.eyebrow, 'center')}
+      ${headline(l.headline, 'h2', 'hl--center')}
+      ${ornament()}
+      <p class="listen__intro">${esc(l.intro)}</p>
+    </div>
+    <div class="listen__grid">
+      <div class="listen__col" data-reveal>
+        <div class="facade" data-facade data-video="${esc(videoId)}">
+          ${img(l.video.poster, { alt: '', sizes: '(max-width: 900px) 94vw, 60vw', ratio: 16 / 9 })}
+          <span class="facade__scrim" aria-hidden="true"></span>
+          <button class="facade__play" type="button" data-facade-play>
+            ${icon('play')}<span class="sr-only">${esc(l.video.playLabel)}</span>
+          </button>
+          <span class="facade__caption" aria-hidden="true">${esc(l.video.caption)}</span>
+        </div>
+      </div>
+      <div class="listen__col" data-reveal>
+        <h3 class="listen__heading">${esc(l.spotify.heading)}</h3>
+        <div class="listen__embed">
+          <iframe title="${esc(C.site.name)} on Spotify" loading="lazy"
+                  src="https://open.spotify.com/embed/artist/${esc(artistId)}?theme=0"
+                  width="100%" height="352" frameborder="0" style="border:0"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <p class="listen__note">${esc(l.spotify.note)}</p>
+        <div class="platforms">${platforms}</div>
+      </div>
+    </div>
+  </div>
+</section>`;
+}
+
+/** Booking form. Posts to `endpoint` when set; otherwise composes a
+ *  structured mailto and shows a visible fallback so it cannot fail silently. */
+function bookingForm(f) {
+  const field = (fl) => {
+    const id = `bk-${fl.name}`;
+    const req = fl.required ? ' required' : '';
+    const mark = fl.required ? ` <span class="field__req" title="${esc(f.required)}">*</span>` : '';
+    const ac = fl.autocomplete ? ` autocomplete="${esc(fl.autocomplete)}"` : '';
+    let control;
+    if (fl.type === 'textarea') {
+      control = `<textarea id="${id}" name="${esc(fl.name)}" rows="${fl.rows || 4}"${req}${ac}></textarea>`;
+    } else if (fl.type === 'select') {
+      const opts = ['<option value="">Please choose</option>']
+        .concat(fl.options.map((o) => `<option value="${esc(o)}">${esc(o)}</option>`))
+        .join('');
+      control = `<select id="${id}" name="${esc(fl.name)}"${req}>${opts}</select>`;
+    } else {
+      control = `<input id="${id}" name="${esc(fl.name)}" type="${esc(fl.type)}"${req}${ac}>`;
+    }
+    return `<p class="field${fl.span === 2 ? ' field--wide' : ''}">
+        <label for="${id}">${esc(fl.label)}${mark}</label>${control}
+      </p>`;
+  };
+
+  const mailto = url('@contactEmail');
+  const whatsapp = url('@social.whatsapp');
+
+  return `<form class="form" data-booking
+      ${f.endpoint ? `action="${esc(f.endpoint)}" method="post"` : ''}
+      data-endpoint="${esc(f.endpoint || '')}"
+      data-mailto="${esc(mailto)}"
+      novalidate>
+      <div class="form__grid">${f.fields.map(field).join('')}</div>
+      <p class="form__gotcha" aria-hidden="true">
+        <label for="bk-company">Do not fill this in</label>
+        <input id="bk-company" name="_company" type="text" tabindex="-1" autocomplete="off">
+      </p>
+      <button class="btn btn--gold form__submit" type="submit">
+        <span data-submit-label>${esc(f.submit)}</span>${icon('arrow-right', 'btn__arrow')}
+      </button>
+      <div class="form__status" role="status" aria-live="polite" data-form-status hidden>
+        <p class="form__status-heading" data-status-heading></p>
+        <p class="form__status-body" data-status-body></p>
+        <div class="form__fallback" data-status-fallback hidden>
+          <a class="platform" href="${esc(mailto)}">${icon('mail')}<span>${esc(mailto.replace('mailto:', ''))}</span></a>
+          <button class="platform" type="button" data-copy="${esc(mailto.replace('mailto:', ''))}"
+                  data-copy-label="${esc(f.mailtoNote.copyLabel)}" data-copied-label="${esc(f.mailtoNote.copiedLabel)}">
+            ${icon('copy')}<span>${esc(f.mailtoNote.copyLabel)}</span>
+          </button>
+          <a class="platform" href="${esc(whatsapp)}"${linkAttrs(whatsapp)}>${icon('whatsapp')}<span>WhatsApp</span></a>
+        </div>
+      </div>
+      <script type="application/json" data-form-copy>${JSON.stringify({
+        success: f.success, mailtoNote: f.mailtoNote, error: f.error, sending: f.sending, submit: f.submit,
+      })}</script>
+    </form>`;
+}
+
 function ctaBand() {
   const c = C.cta;
-  return `<section class="cta section">
+  return `<section class="cta section" id="${c.id}">
   <div class="cta__glow" aria-hidden="true"></div>
-  <div class="shell cta__inner" data-reveal-group>
-    ${eyebrow(c.eyebrow, 'center')}
-    ${headline(c.headline, 'h2', 'hl--center hl--cta')}
-    <div class="cta__action">${button(c.button)}</div>
+  <div class="shell cta__inner">
+    <div data-reveal-group>
+      ${eyebrow(c.eyebrow, 'center')}
+      ${headline(c.headline, 'h2', 'hl--center hl--cta')}
+      <p class="cta__intro">${esc(c.intro)}</p>
+    </div>
+    <div class="cta__form" data-reveal>${bookingForm(c.form)}</div>
   </div>
 </section>`;
 }
@@ -497,6 +614,7 @@ ${about()}
 ${services()}
 ${why()}
 ${eventsAndClients()}
+${listen()}
 ${gallery()}
 ${ctaBand()}
 </main>
