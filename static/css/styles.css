@@ -814,8 +814,11 @@ input { font: inherit; }
   font-size: clamp(14px, .3vw + 13px, 16px);
 }
 
-.listen__grid { display: grid; gap: clamp(20px, 3vw, 34px); align-items: start; }
-.listen__col { min-width: 0; }
+.listen__player {
+  width: min(760px, 100%);
+  margin-inline: auto;
+  text-align: center;
+}
 
 .listen__heading {
   margin: 0 0 clamp(12px, 1.6vw, 18px);
@@ -824,78 +827,36 @@ input { font: inherit; }
   font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
   color: var(--white);
 }
+
+/* Spotify renders its own rounded card, so it sits inside a square
+   gold-tinted frame (same device as the About image) rather than fighting it */
 .listen__embed {
-  border: 1px solid var(--line);
-  background: var(--surface);
+  border: 1px solid var(--gold-line);
+  background: var(--black);
   box-shadow: var(--shadow-card);
-  overflow: hidden;
+  padding: clamp(8px, 1vw, 12px);
 }
-.listen__embed iframe { display: block; width: 100%; }
+/* Spotify only lays out at two heights: 152 (compact) and 352 (with track
+   list). Anything in between leaves dead space inside the iframe, so this
+   snaps between the two rather than interpolating. */
+.listen__embed iframe {
+  display: block;
+  width: 100%;
+  height: 352px;
+  border: 0;
+}
+@media (max-width: 400px) {
+  .listen__embed iframe { height: 152px; }
+}
 .listen__note {
-  margin-top: 12px;
+  margin-top: 14px;
   color: var(--muted);
   font-size: clamp(12.5px, .28vw + 11.6px, 14px);
 }
 
-/* click-to-load video facade: no third-party script until the user asks */
-.facade {
-  position: relative;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-card);
-  overflow: hidden;
-  background: var(--surface);
-}
-.facade img {
-  width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
-  filter: saturate(1.05) contrast(1.04);
-  transition: transform 1.1s var(--ease-out), filter .6s var(--ease);
-}
-.facade:hover img { transform: scale(1.04); }
-.facade__scrim {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgb(var(--ink-rgb) / .8), rgb(var(--ink-rgb) / .15) 55%, transparent);
-}
-.facade__play {
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  display: grid; place-items: center;
-  width: clamp(60px, 6vw, 78px); aspect-ratio: 1; border-radius: 50%;
-  border: 1px solid rgb(var(--gold-rgb) / .5);
-  background: rgb(var(--ink-rgb) / .55);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: var(--gold);
-  font-size: clamp(24px, 2.4vw, 30px);
-  transition: transform .5s var(--ease-out), color .4s var(--ease),
-              border-color .4s var(--ease), box-shadow .45s var(--ease);
-}
-.facade__play .ico { transform: translateX(2px); }
-.facade__play::after {
-  content: ''; position: absolute; inset: -1px; border-radius: 50%;
-  background: var(--grad-button);
-  opacity: 0; z-index: -1;
-  transition: opacity .4s var(--ease);
-}
-.facade__play:hover, .facade__play:focus-visible {
-  color: #17130c; border-color: transparent;
-  transform: translate(-50%, -50%) scale(1.06);
-  box-shadow: 0 18px 40px -16px rgb(var(--gold-rgb) / .55);
-}
-.facade__play:hover::after, .facade__play:focus-visible::after { opacity: 1; }
-.facade__caption {
-  position: absolute; left: clamp(14px, 1.8vw, 22px); bottom: clamp(12px, 1.5vw, 18px);
-  font-family: var(--sans);
-  font-size: clamp(9.5px, .16vw + 9px, 11px);
-  font-weight: 600; letter-spacing: .18em; text-transform: uppercase;
-  color: rgba(255, 255, 255, .82);
-}
-.facade.is-playing img,
-.facade.is-playing .facade__scrim,
-.facade.is-playing .facade__play,
-.facade.is-playing .facade__caption { display: none; }
-.facade iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
-
 .platforms { display: flex; flex-wrap: wrap; gap: 10px; margin-top: clamp(16px, 2vw, 22px); }
+/* flex ignores the parent's text-align, so centre explicitly */
+.listen__player .platforms { justify-content: center; }
 .platform {
   display: inline-flex; align-items: center; gap: 9px;
   min-height: 42px; padding-inline: 16px;
@@ -1224,8 +1185,35 @@ input { font: inherit; }
   }
 }
 
-@media (min-width: 900px) {
-  .listen__grid { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); }
+/* Core Pillars: horizontal snap carousel on phones only.
+   Tablet (>=700px, 2 col) and desktop (>=1024px, 3 col) are untouched.
+   The grid is bled to the viewport edges so the next card peeks, then
+   re-inset with padding so the first and last card still align to the
+   normal gutter. */
+@media (max-width: 699px) {
+  .services__grid {
+    display: flex;
+    grid-template-columns: none;
+    gap: 14px;
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+    padding-block: 4px 6px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .services__grid::-webkit-scrollbar { display: none; }
+
+  .services__grid > .card {
+    flex: 0 0 clamp(230px, 78%, 320px);
+    scroll-snap-align: start;
+  }
+  /* lift on hover would clip inside the scroller; keep the press feedback */
+  .services__grid > .card:hover { transform: none; }
+  .services__grid > .card:active { transform: scale(.985); }
 }
 
 @media (max-width: 560px) {

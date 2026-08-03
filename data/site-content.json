@@ -41,7 +41,7 @@
     ],
     "buttons": [
       { "label": "Book the Band", "href": "#booking", "variant": "gold", "icon": "arrow-right" },
-      { "label": "Watch Live", "href": "#listen", "variant": "outline", "icon": "play" }
+      { "label": "Watch Live", "href": "@watchLive", "variant": "outline", "icon": "play", "external": true }
     ],
     "scrollLabel": "Scroll",
     "image": { "slug": "hero", "alt": "Juma Tutu performing on saxophone under stage lights" }
@@ -176,12 +176,6 @@
       { "text": "the Coast", "style": "gold", "inline": true }
     ],
     "intro": "Put the band on before you book us. This is what a Swahili Jazz night actually sounds like.",
-    "video": {
-      "_source": "video id is parsed from `watchLive` in juma-tutu-links.json at build time",
-      "poster": "gallery/g01",
-      "caption": "Live in performance",
-      "playLabel": "Play the performance"
-    },
     "spotify": {
       "_source": "artist id is parsed from `social.spotify` in juma-tutu-links.json at build time",
       "heading": "On Spotify",

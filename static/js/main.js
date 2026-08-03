@@ -226,27 +226,6 @@
     restart();
   })();
 
-  /* ------------------------------------------------------------ video facade */
-  (function facade() {
-    $$('[data-facade]').forEach(function (box) {
-      var btn = $('[data-facade-play]', box);
-      if (!btn) return;
-      btn.addEventListener('click', function () {
-        var id = box.getAttribute('data-video');
-        var f = document.createElement('iframe');
-        f.src = 'https://www.youtube-nocookie.com/embed/' + id +
-          '?autoplay=1&rel=0&modestbranding=1&playsinline=1';
-        f.title = btn.textContent.trim() || 'Video';
-        f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
-        f.allowFullscreen = true;
-        f.setAttribute('frameborder', '0');
-        box.classList.add('is-playing');
-        box.appendChild(f);
-        f.focus({ preventScroll: true });
-      });
-    });
-  })();
-
   /* ------------------------------------------------------------ booking form */
   (function booking() {
     var form = $('[data-booking]');

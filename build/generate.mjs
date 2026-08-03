@@ -351,15 +351,11 @@ function gallery() {
 </section>`;
 }
 
-/** Listen: a click-to-load YouTube facade plus the Spotify artist embed.
- *  Both IDs are parsed from the supplied links JSON, never hardcoded. */
+/** Listen: the Spotify artist embed is the only on-page player.
+ *  The artist id is parsed from the supplied links JSON, never hardcoded. */
 function listen() {
   const l = C.listen;
   if (!l) return '';
-
-  const watch = url('@watchLive');
-  const videoId = (watch.match(/[?&]v=([\w-]{6,})/) || watch.match(/youtu\.be\/([\w-]{6,})/) || [])[1];
-  if (!videoId) throw new Error(`Could not parse a YouTube id from watchLive: ${watch}`);
 
   const spotifyUrl = url('@social.spotify');
   const artistId = (spotifyUrl.match(/artist\/([A-Za-z0-9]+)/) || [])[1];
@@ -380,28 +376,16 @@ function listen() {
       ${ornament()}
       <p class="listen__intro">${esc(l.intro)}</p>
     </div>
-    <div class="listen__grid">
-      <div class="listen__col" data-reveal>
-        <div class="facade" data-facade data-video="${esc(videoId)}">
-          ${img(l.video.poster, { alt: '', sizes: '(max-width: 900px) 94vw, 60vw', ratio: 16 / 9 })}
-          <span class="facade__scrim" aria-hidden="true"></span>
-          <button class="facade__play" type="button" data-facade-play>
-            ${icon('play')}<span class="sr-only">${esc(l.video.playLabel)}</span>
-          </button>
-          <span class="facade__caption" aria-hidden="true">${esc(l.video.caption)}</span>
-        </div>
+    <div class="listen__player" data-reveal>
+      <h3 class="listen__heading">${esc(l.spotify.heading)}</h3>
+      <div class="listen__embed">
+        <iframe title="${esc(C.site.name)} on Spotify" loading="lazy"
+                src="https://open.spotify.com/embed/artist/${esc(artistId)}?theme=0"
+                frameborder="0" style="border:0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
       </div>
-      <div class="listen__col" data-reveal>
-        <h3 class="listen__heading">${esc(l.spotify.heading)}</h3>
-        <div class="listen__embed">
-          <iframe title="${esc(C.site.name)} on Spotify" loading="lazy"
-                  src="https://open.spotify.com/embed/artist/${esc(artistId)}?theme=0"
-                  width="100%" height="352" frameborder="0" style="border:0"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        </div>
-        <p class="listen__note">${esc(l.spotify.note)}</p>
-        <div class="platforms">${platforms}</div>
-      </div>
+      <p class="listen__note">${esc(l.spotify.note)}</p>
+      <div class="platforms">${platforms}</div>
     </div>
   </div>
 </section>`;
