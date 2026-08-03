@@ -37,16 +37,6 @@
    "w": 640
   }
  ],
- "recognition": [
-  {
-   "src": "recognition-560.webp",
-   "w": 560
-  },
-  {
-   "src": "recognition-360.webp",
-   "w": 360
-  }
- ],
  "svc-live": [
   {
    "src": "svc-live-900.webp",

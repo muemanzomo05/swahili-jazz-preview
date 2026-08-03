@@ -55,20 +55,6 @@
     ],
     "image": { "slug": "studio", "alt": "The Swahili Jazz recording studio with mixing desk and illuminated logo" },
     "badge": { "top": "Est.", "bottom": "2010" },
-    "recognition": {
-      "label": "National Recognition",
-      "heading": "National Hero Honouree",
-      "supportingLines": [
-        "Honoured by the Government of Kenya",
-        "for music, arts and cultural heritage."
-      ],
-      "linkLabel": "Learn More",
-      "image": { "slug": "recognition", "alt": "Juma Tutu receiving the National Hero honour" },
-      "modal": {
-        "heading": "National Recognition",
-        "story": "The Government of Kenya honoured Juma Tutu with the National Hero title in recognition of his outstanding contribution to the country’s music, arts and cultural heritage. The recognition reflects a career of performance, leadership and cultural contribution that continues through Swahili Jazz."
-      }
-    },
     "paragraphs": [
       "Swahili Jazz is a premier Kenyan entertainment company specializing in world-class live music entertainment, event production, artist management, record label services, and entertainment consultancy. We create exceptional experiences for corporate events, festivals, diplomatic missions, hospitality venues, private celebrations, and cultural productions, delivering creativity, professionalism, and excellence at every stage.",
       "Founded by renowned saxophonist, composer, music director, and cultural ambassador Juma Tutu, the company is built on decades of industry experience and trusted partnerships. Juma is a respected and accomplished musician who was conferred the National Hero title by the Government of Kenya in recognition of his outstanding contribution to the nation's music, arts, and cultural heritage.",

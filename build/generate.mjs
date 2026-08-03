@@ -172,7 +172,6 @@ function hero() {
 
 function about() {
   const a = C.about;
-  const r = a.recognition;
   const stats = a.stats
     .map(
       (s) =>
@@ -188,19 +187,7 @@ function about() {
         sizes: '(max-width: 900px) 92vw, 50vw',
         ratio: 5 / 4,
       })}</div>
-      <button class="recognition-card" type="button" aria-label="${esc(r.linkLabel)}: ${esc(r.heading)}" data-recognition-open>
-        <div class="recognition-card__image">${img(r.image.slug, {
-          alt: r.image.alt,
-          sizes: '(max-width: 699px) 80px, 86px',
-          ratio: 4 / 3,
-        })}</div>
-        <div class="recognition-card__body">
-          <p class="recognition-card__label">${esc(r.label)}</p>
-          <h3 class="recognition-card__title">${esc(r.heading)}</h3>
-          <p class="recognition-card__text">${r.supportingLines.map((line) => `${esc(line)}<br>`).join('')}</p>
-          <span class="recognition-card__link">${esc(r.linkLabel)}${icon('arrow-right', 'link-more__arrow')}</span>
-        </div>
-      </button>
+      <div class="badge" aria-hidden="true"><span>${esc(a.badge.top)}</span><span>${esc(a.badge.bottom)}</span></div>
     </figure>
     <div class="about__body" data-reveal-group>
       ${eyebrow(a.eyebrow)}
@@ -208,15 +195,6 @@ function about() {
       ${a.paragraphs.map((p) => `<p class="prose">${esc(p)}</p>`).join('')}
       <div class="about__stats">${stats}</div>
       <div class="about__cta">${button(a.cta)}</div>
-    </div>
-  </div>
-  <div class="recognition-modal" id="recognition-story" role="dialog" aria-modal="true" aria-labelledby="recognition-modal-title" hidden data-recognition-modal>
-    <div class="recognition-modal__backdrop" data-recognition-close></div>
-    <div class="recognition-modal__panel" role="document">
-      <button class="recognition-modal__close" type="button" aria-label="Close recognition story" data-recognition-close>×</button>
-      <p class="recognition-card__label">${esc(r.modal.heading)}</p>
-      <h2 class="recognition-modal__title" id="recognition-modal-title">${esc(r.heading)}</h2>
-      <p class="recognition-modal__text">${esc(r.modal.story)}</p>
     </div>
   </div>
 </section>`;
