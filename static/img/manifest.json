@@ -1,25 +1,25 @@
 {
  "hero": [
   {
-   "src": "hero-1536.webp",
+   "src": "hero-v2-1536.webp",
    "w": 1535
   },
   {
-   "src": "hero-1100.webp",
+   "src": "hero-v2-1100.webp",
    "w": 1100
   },
   {
-   "src": "hero-760.webp",
+   "src": "hero-v2-760.webp",
    "w": 760
   }
  ],
  "hero-portrait": [
   {
-   "src": "hero-portrait-900.webp",
+   "src": "hero-portrait-v2-900.webp",
    "w": 768
   },
   {
-   "src": "hero-portrait-620.webp",
+   "src": "hero-portrait-v2-620.webp",
    "w": 620
   }
  ],

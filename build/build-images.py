@@ -54,7 +54,7 @@ def emit(im, rel, q=82, alpha=False):
     return im.width, im.height, kb
 
 
-def cover(name, slug, ratio, labels, focus=(0.5, 0.4), q=82):
+def cover(name, slug, ratio, labels, focus=(0.5, 0.4), q=82, filename_slug=None):
     """Crop to ratio around focus; emit one file per label width.
 
     Requested widths are clamped to the native size (never upscale), but the
@@ -73,7 +73,7 @@ def cover(name, slug, ratio, labels, focus=(0.5, 0.4), q=82):
     for label in labels:
         w = min(label, im.width)
         h = max(1, int(round(w / ratio)))
-        rel = f"{slug}-{label}.webp"
+        rel = f"{filename_slug or slug}-{label}.webp"
         if w in seen:                      # identical pixels -> copy, keep name
             shutil.copy(os.path.join(OUT, seen[w]), os.path.join(OUT, rel))
             entries.append({"src": rel.replace("\\", "/"), "w": w})
@@ -87,8 +87,8 @@ def cover(name, slug, ratio, labels, focus=(0.5, 0.4), q=82):
 
 
 print("hero")
-cover("home-hero-2026.png", "hero", 3 / 2, [1536, 1100, 760], focus=(0.5, 0.5), q=80)
-cover("home-hero-2026.png", "hero-portrait", 3 / 4, [900, 620], focus=(0.5, 0.5), q=80)
+cover("home-hero-2026-v2.png", "hero", 3 / 2, [1536, 1100, 760], focus=(0.5, 0.5), q=80, filename_slug="hero-v2")
+cover("home-hero-2026-v2.png", "hero-portrait", 3 / 4, [900, 620], focus=(0.5, 0.5), q=80, filename_slug="hero-portrait-v2")
 
 print("about / studio")
 cover("studio.png", "studio", 5 / 4, [1240, 900, 640], focus=(0.5, 0.5))
