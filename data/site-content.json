@@ -58,7 +58,10 @@
     "recognition": {
       "label": "National Recognition",
       "heading": "National Hero Honouree",
-      "text": "Founder Juma Tutu was honoured by the Government of Kenya for his outstanding contribution to Kenya's music, arts and cultural heritage.",
+      "supportingLines": [
+        "Honoured by the Government of Kenya",
+        "for music, arts and cultural heritage."
+      ],
       "linkLabel": "Learn More",
       "image": { "slug": "recognition", "alt": "Juma Tutu receiving the National Hero honour" },
       "modal": {

@@ -188,19 +188,19 @@ function about() {
         sizes: '(max-width: 900px) 92vw, 50vw',
         ratio: 5 / 4,
       })}</div>
-      <aside class="recognition-card" aria-label="${esc(r.label)}">
+      <button class="recognition-card" type="button" aria-label="${esc(r.linkLabel)}: ${esc(r.heading)}" data-recognition-open>
         <div class="recognition-card__image">${img(r.image.slug, {
           alt: r.image.alt,
-          sizes: '(max-width: 699px) 106px, 118px',
+          sizes: '(max-width: 699px) 80px, 86px',
           ratio: 4 / 3,
         })}</div>
         <div class="recognition-card__body">
           <p class="recognition-card__label">${esc(r.label)}</p>
           <h3 class="recognition-card__title">${esc(r.heading)}</h3>
-          <p class="recognition-card__text">${esc(r.text)}</p>
-          <a class="recognition-card__link" href="#recognition-story" data-recognition-open>${esc(r.linkLabel)}${icon('arrow-right', 'link-more__arrow')}</a>
+          <p class="recognition-card__text">${r.supportingLines.map((line) => `${esc(line)}<br>`).join('')}</p>
+          <span class="recognition-card__link">${esc(r.linkLabel)}${icon('arrow-right', 'link-more__arrow')}</span>
         </div>
-      </aside>
+      </button>
     </figure>
     <div class="about__body" data-reveal-group>
       ${eyebrow(a.eyebrow)}
