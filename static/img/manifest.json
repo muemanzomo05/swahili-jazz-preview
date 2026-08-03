@@ -669,5 +669,12 @@
    "w": 118,
    "h": 25
   }
+ ],
+ "client:safaricom-international-jazz-festival": [
+  {
+   "src": "clients/safaricom-international-jazz-festival.webp",
+   "w": 276,
+   "h": 268
+  }
  ]
 }

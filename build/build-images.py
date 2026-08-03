@@ -205,7 +205,7 @@ for px in (180, 32):
 
 print("client logos")
 for f in ["absa-logo-bg.png", "acek-logo.webp", "icipe-logo-monochrome.png",
-          "rotary-clubs-of-kenya.webp", "safaricom.png"]:
+          "rotary-clubs-of-kenya.webp", "safaricom.png", "safaricom-international-jazz-festival.png"]:
     im = load(f).convert("RGBA")
     if im.width > 400:
         im = im.resize((400, int(round(im.height * 400 / im.width))), Image.LANCZOS)

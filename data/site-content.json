@@ -164,6 +164,7 @@
     "logos": [
       { "slug": "absa-logo-bg", "name": "ABSA" },
       { "slug": "safaricom", "name": "Safaricom" },
+      { "slug": "safaricom-international-jazz-festival", "name": "Safaricom International Jazz Festival" },
       { "slug": "icipe-logo-monochrome", "name": "ICIPE" },
       { "slug": "acek-logo", "name": "ACEK" },
       { "slug": "rotary-clubs-of-kenya", "name": "Rotary Clubs of Kenya" }

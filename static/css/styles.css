@@ -690,20 +690,14 @@ input { font: inherit; }
   align-items: center;
 }
 .client { display: grid; place-items: center; }
-/* The reference renders every client mark as a flat white silhouette at ~44%
-   opacity, which normalises logos that ship as black-on-transparent art. */
 .client img {
   width: auto; max-width: 100%;
   max-height: clamp(24px, 2.6vw, 34px);
   object-fit: contain;
-  /* .48 is a compromise: brighter than before for the wordmark logos, but
-     restrained enough that the two silhouette-only marks (Kenya seal,
-     Radisson block) do not dominate the row */
-  filter: brightness(0) invert(1);
-  opacity: .48;
+  opacity: .86;
   transition: opacity .5s var(--ease), transform .5s var(--ease-out);
 }
-.client img:hover { opacity: .92; transform: scale(1.05); }
+.client img:hover { opacity: 1; transform: scale(1.05); }
 
 /* --------------------------------------------------------------- gallery */
 .gallery__stage { position: relative; }
