@@ -118,7 +118,7 @@ function navBar() {
   const links = C.nav.links.map((l) => `<li><a class="nav__link" href="${esc(link(l.href))}"${l.href === '#services' && CTX.active ? ' aria-current="true"' : ''}>${esc(l.label)}</a></li>`).join('');
   const brand =
     `<a class="brand" href="${esc(link('#home'))}" aria-label="${esc(C.site.name)} home">` +
-    `${img('logo', { alt: '', cls: 'brand__mark', sizes: '40px', eager: true, ratio: 320 / 338 })}` +
+    `${img('logo', { alt: '', cls: 'brand__mark', sizes: '44px', eager: true, ratio: 320 / 338 })}` +
     `<span class="brand__word">${esc(C.site.wordmark)}</span></a>`;
   const cta = button({ ...C.nav.cta, variant: 'outline', icon: null }, 'btn--sm nav__cta');
   return `<header class="nav" id="nav" data-nav>
@@ -265,22 +265,12 @@ function eventsAndClients() {
   const cl = C.clients;
 
   const rows = e.items
-    .map((it) => {
-      const href = url(it.href);
-      return `<li class="event" data-reveal>
-      <a class="event__link" href="${esc(href)}"${linkAttrs(href)}>
-        <span class="event__date"><b>${esc(it.day)}</b><i>${esc(it.month)}</i></span>
-        <span class="event__main">
-          <span class="event__title">${esc(it.title)}</span>
-          <span class="event__meta">
-            <span>${icon('pin')}${esc(it.venue)}</span>
-            <span>${icon('clock')}${esc(it.time)}</span>
-          </span>
-        </span>
-        <span class="event__cta">${esc(e.detailsLabel)}${icon('arrow-right', 'link-more__arrow')}</span>
-      </a>
-    </li>`;
-    })
+    .map((it) => `<li class="event" data-reveal>
+      <div class="event__link event__link--past">
+        <span class="event__date"><b>Past</b><i>${esc(e.pastLabel)}</i></span>
+        <span class="event__main"><span class="event__title">${esc(it.title)}</span></span>
+      </div>
+    </li>`)
     .join('');
 
   const logos = cl.logos
@@ -300,7 +290,7 @@ function eventsAndClients() {
         ${headline(e.headline, 'h2', 'hl--sm')}
       </div>
       <ul class="events">${rows}</ul>
-      <div class="duo__cta" data-reveal>${button(e.cta, 'btn--sm')}</div>
+${e.cta ? `      <div class="duo__cta" data-reveal>${button(e.cta, 'btn--sm')}</div>\n` : ''}
     </div>
     <div class="duo__col">
       <div data-reveal-group>
@@ -843,7 +833,7 @@ const html = document_({
   canonical: LINKS.website,
   preload: MANIFEST.hero,
   schema,
-  body: [hero(), about(), services(), why(), eventsAndClients(), listen(), gallery(), ctaBand()].join('\n'),
+  body: [hero(), about(), services(), why(), eventsAndClients(), gallery(), ctaBand()].join('\n'),
 });
 
 writeFileSync(join(ROOT, 'index.html'), html, 'utf8');

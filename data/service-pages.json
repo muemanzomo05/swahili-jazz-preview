@@ -14,17 +14,17 @@
   "pages": [
     {
       "slug": "live-entertainment",
-      "navLabel": "Live Entertainment",
-      "cardTitle": "Live Entertainment",
-      "title": "Live Entertainment | Swahili Jazz",
+      "navLabel": "Live Music Entertainment",
+      "cardTitle": "Live Music Entertainment",
+      "title": "Live Music Entertainment | Swahili Jazz",
       "description": "Swahili Jazz performs at corporate events, weddings, festivals, hotels, private celebrations and diplomatic functions across Kenya.",
-      "eyebrow": "Live Entertainment",
+      "eyebrow": "Live Music Entertainment",
       "headline": [
         { "text": "Music That Fills", "style": "plain" },
         { "text": "the Room", "style": "gold", "inline": true }
       ],
       "lede": "The band reads a room before it plays one. A quiet dinner set and a main festival stage need different things, and we bring the right one.",
-      "ctaLabel": "Book Live Entertainment",
+      "ctaLabel": "Book Live Music Entertainment",
       "hero": { "slug": "pages/live-entertainment-hero", "alt": "Juma Tutu performing on stage at a jazz festival" },
 
       "intro": {
@@ -35,7 +35,7 @@
         ],
         "paragraphs": [
           "Swahili Jazz performs as a full band, a compact ensemble or a solo instrumentalist. The line-up is chosen around your event rather than sold to you as a fixed package.",
-          "Our sound sits where Swahili coastal tradition meets modern jazz. It works as background music over dinner, and it still works when the floor fills after midnight."
+          "Our sound brings together accomplished musicianship and modern jazz. It works as background music over dinner, and it still works when the floor fills after midnight."
         ],
         "image": { "slug": "pages/live-entertainment-feature", "alt": "The Swahili Jazz horn section performing live" }
       },
@@ -50,7 +50,7 @@
           { "title": "Corporate events", "text": "Launches, awards nights, conferences and staff celebrations, pitched at a level that suits the room." },
           { "title": "Weddings", "text": "Ceremony, cocktail hour and reception, with the repertoire agreed with you beforehand." },
           { "title": "Festivals", "text": "Main stage sets with the full band and a live horn section." },
-          { "title": "Hotels and resorts", "text": "Residencies and one-off nights for coastal and city properties." },
+          { "title": "Hotels and resorts", "text": "Residencies and one-off nights for hotels and city properties." },
           { "title": "Private celebrations", "text": "Birthdays, anniversaries and home events for smaller groups." },
           { "title": "Diplomatic events", "text": "National days, receptions and cultural evenings for missions in Nairobi and Mombasa." },
           { "title": "Cultural events", "text": "Heritage nights and public celebrations built around Kenyan music." }
@@ -81,7 +81,7 @@
           { "slug": "pages/live-entertainment-m1", "alt": "Juma Tutu playing saxophone at the Safaricom International Jazz Festival" },
           { "slug": "pages/live-entertainment-m2", "alt": "Trumpet and saxophone players performing together on stage" },
           { "slug": "pages/live-entertainment-m3", "alt": "The band performing under stage lighting" },
-          { "slug": "pages/live-entertainment-m4", "alt": "An open-air evening performance on the coast" },
+          { "slug": "pages/live-entertainment-m4", "alt": "An open-air evening performance" },
           { "slug": "pages/live-entertainment-m5", "alt": "The horn section during a live set" },
           { "slug": "pages/live-entertainment-m6", "alt": "Saxophonist and trumpet player performing together" },
           { "slug": "pages/live-entertainment-m7", "alt": "The band playing an indoor venue" },
@@ -130,7 +130,7 @@
           { "title": "Saxophonists", "text": "Solo sax for receptions, dinners and ceremonies." },
           { "title": "DJs", "text": "Sets that carry the night once the band finishes." },
           { "title": "MCs", "text": "Hosts who keep a programme moving and know when to stop talking." },
-          { "title": "Traditional performers", "text": "Coastal and up-country groups, including drummers and dancers." },
+          { "title": "Traditional performers", "text": "Kenyan groups, including drummers and dancers." },
           { "title": "Cultural acts", "text": "Ensembles for heritage nights and diplomatic programmes." }
         ]
       },
@@ -261,10 +261,10 @@
       "description": "Recording, production, mixing, mastering, distribution and artist development from the Swahili Jazz studio.",
       "eyebrow": "Record Label",
       "headline": [
-        { "text": "Recorded on", "style": "plain" },
-        { "text": "the Coast", "style": "gold", "inline": true }
+        { "text": "Original Music", "style": "plain" },
+        { "text": "Made Here", "style": "gold", "inline": true }
       ],
-      "lede": "Our studio exists so the coastal sound gets recorded properly, by people who understand how it is meant to breathe.",
+      "lede": "Our studio exists so original music is recorded properly, by people who understand how it is meant to breathe.",
       "ctaLabel": "Book Studio Time",
       "hero": { "slug": "pages/record-label-hero", "alt": "The Swahili Jazz recording studio control room" },
 

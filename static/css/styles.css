@@ -294,6 +294,8 @@ input { font: inherit; }
   letter-spacing: .22em;
   color: var(--white);
 }
+.nav .brand__mark { width: clamp(34px, 2.9vw, 42px); }
+.nav .brand__word { font-size: clamp(12.5px, .32vw + 11px, 16px); }
 
 .nav__links { display: none; }
 .nav__links ul { display: flex; align-items: center; gap: clamp(20px, 2.4vw, 38px); }
@@ -630,6 +632,7 @@ input { font: inherit; }
   transition: background .45s var(--ease);
 }
 .event__link:hover { background: rgba(255, 255, 255, .032); }
+.event__link--past { grid-template-columns: auto minmax(0, 1fr); }
 
 .event__date {
   display: grid; place-items: center; align-content: center;
